@@ -8,6 +8,7 @@ class Penguin(Birds):
         print('i`m penguin, i`m a kind of birds, but i can`t fly')
 
 a = Birds()
+
 b = Penguin()
 a.fly()
 b.fly()
