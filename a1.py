@@ -10,6 +10,7 @@ class Penguin(Birds):
 a = Birds()
 
 b = Penguin()
+
 a.fly()
 b.fly()
 a.eat()
