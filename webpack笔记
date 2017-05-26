@@ -1,0 +1,11 @@
+webpack
+1.npm install vue-cli -g	安装vue命令环境
+	验证，vue --version，如果出来版本号，证明安装完毕
+2.生成项目模板
+	vue init <模板名> 本地文件夹名称
+	eg：vue init webpack vuetest
+
+3.	cd进入到生成目录里 
+	输入npm install
+4.npm run dev
+	如果端口冲突，需要到index.js修改port端口
