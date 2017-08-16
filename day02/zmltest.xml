@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<data>
+    <country name = 'China'>
+        <rank updated = 'yes1'>2</rank>
+        <year>20081</year>
+        <gdppc>1411001</gdppc>
+    </country>
+    <country name = 'America'>
+        <rank updated = 'yes'>2</rank>
+        <year>2008</year>
+        <gdppc>141100</gdppc>
+    </country>
+    <country name = 'Rusia'>
+        <rank updated = 'yes'>2</rank>
+        <year>2008</year>
+        <gdppc>141100</gdppc>
+    </country>
+</data>
