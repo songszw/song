@@ -1,0 +1,14 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: #eee;
+}
+label{
+    width:80px;
+    display: inline-block;
+}
+p span{
+    color: #f66;
+}
