@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="login" method="post">
+
+    <p>
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username">
+    </p>
+     <p>
+        <label for="password">密码：</label>
+        <input type="text" id="password" name="password">
+         <input type="submit" value="提交">
+         <input type="button" class="register" value="注册">
+    </p>
+</form>
+
+
+</body>
+<script>
+    window.onload = function () {
+        var register = document.getElementsByClassName('register')[0]
+        register.onclick = function () {
+            window.location.href = 'http://127.0.0.1:8000/cmdb/register'
+        }
+    }
+</script>
+</html>
