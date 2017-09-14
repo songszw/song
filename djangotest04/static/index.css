@@ -1,0 +1,18 @@
+.header{
+    height:80px;
+    width:100%;
+    background: #F66;
+}
+.container{
+    overflow: hidden;
+    height:100%;
+}
+.cLeft{
+    width:120px;
+    height:100%;
+    float: left;
+    background: #0f0;
+}
+.cRight{
+    float: left;
+}

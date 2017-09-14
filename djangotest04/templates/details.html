@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/common.css">
+    <link rel="stylesheet" href="/static/index.css">
+    <link rel="stylesheet" href="/static/details.css">
+</head>
+<body>
+<div class="header">jet Song后台管理系统</div>
+<div class="container">
+    <div class="cLeft">
+        <ul>
+            <li><a href="userlist">用户管理</a></li>
+            <li><a href="">用户组管理</a></li>
+        </ul>
+    </div>
+    <div class="cRight">
+        <h2>用户列表</h2>
+        <ul>
+            <li style="display: none">{{ obj.id }}</li>
+            <li >用户名：{{ obj.username }}</li>
+            <li>密码：{{ obj.password }}</li>
+            <li>所属组：{{ obj.user_group.caption }}</li>
+            <a href="userEdit-{{ obj.id }}" >修改</a>
+            <a href="delete-{{ obj.id }}" >删除</a>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

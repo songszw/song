@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/common.css">
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+<form action="login" method="POST">
+    <p>
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="user" >
+    </p>
+     <p>
+        <label for="password">密码：</label>
+        <input type="text" id="password" name="pwd" >
+    </p>
+    <p>
+        <input type="submit" value="提交">
+        <input type="button" id="register" value="注册">
+    </p>
+
+
+</form>
+<script>
+    window.onload = function () {
+        var register = document.getElementById('register');
+        register.onclick = function () {
+            window.location.href = 'http://127.0.0.1:8000/cmdb/register'
+        }
+    }
+</script>
+</body>
+</html>
