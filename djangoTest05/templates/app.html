@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/common.css">
+    <link rel="stylesheet" href="/static/host.css">
+    <script src="/static/jquery-1.12.4.js"></script>
+</head>
+<body>
+<div class="edit">添加</div>
+<div class="mask hide " >
+    <form action="app" method="post">
+        <p>
+            <input type="text" id="city" name="city" placeholder="城市名">
+        </p>
+        <p>
+            <select name="code" id="ip" multiple>
+                {% for foo in host_list %}
+                    <option value="{{ foo.nid }}">{{ foo.hostname }}</option>
+                {% endfor %}
+             </select>
+        </p>
+        <p>
+            <input type="button" class="add" value="确定">
+            <input type="button" class="cancel" value="取消">
+            <span class="error"></span>
+        </p>
+    </form>
+</div>
+<div class="mask hide addmask" >
+    <form action="app" method="post">
+        <input type="text" id="ecity" name="city" placeholder="城市名">
+        <select name="code" id="eip" multiple>
+            {% for foo in host_list %}
+                <option value="{{ foo.nid }}">{{ foo.hostname }}</option>
+            {% endfor %}
+         </select>
+        <p>
+            <input type="button" class="eadd" value="确定">
+            <input type="button" class="cancel" value="取消">
+            <span class="error"></span>
+        </p>
+    </form>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>城市名</th>
+            <th>ip</th>
+            <th>编辑</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in app_list %}
+            <tr>
+                <td cid = {{ item.id }}>{{ item.name }}</td>
+                <td>
+                    {% for app in item.r.all %}
+                        <span hid="{{ app.nid }}">{{ app.hostname }}</span>
+                    {% endfor %}
+                </td>
+                <td><a class="change" href="javascript:;">编辑</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    $(function () {
+        $('.edit').on('click',function () {
+            $('.mask').removeClass('hide')
+        });
+        $('.cancel').on('click',function () {
+            $('.mask').addClass('hide')
+        });
+        $('.add').on('click',function () {
+            $.ajax({
+                url:'/cmdb/addapp/',
+                type:"POST",
+                dataType:"JSON",
+                data:{
+                    'cityname':$('#city').val(),
+                    'ips':$('#ip').val()
+                },
+                traditional:true,
+                success:function (data) {
+                    if (data.status){
+                        location.reload()
+                    }
+                },
+                error:function (err) {
+                }
+            })
+        })
+        $(".change").on('click',function () {
+            $('.addmask').removeClass('hide');
+            var hid_list = [];
+            $(this).parent().prev().children().each(function () {
+                var hid = $(this).attr('hid');
+                hid_list.push(hid)
+            });
+            var cn = $(this).parent().prev().prev().html();
+            $('#eip').val(hid_list);
+            $('#ecity').val(cn)
+            var cid = $(this).parent().prev().prev().attr('cid');
+            $('.eadd').on('click',function () {
+                $.ajax({
+                    url:"/cmdb/editapp/",
+                    type :"POST",
+                    dataType:"JSON",
+                    data:{
+                        'cityname': $('#ecity').val(),
+                        'ips': $('#eip').val(),
+                        'cid':cid
+                    },
+                    traditional:true,
+                    success:function (data) {
+                        if (data.status){
+                            location.reload()
+                        }
+                    },
+                    error:function (err) {
+                    }
+
+                })
+            })
+        })
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pgs a{
+            display: inline-block;
+            width: 30px;
+            height:30px;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            background: #999922;
+            color: #fff;
+            margin:5px;
+        }
+        .pgs a:hover{
+            background: #119922;
+            color: #000;
+        }
+        .pgs a.bg{
+            background: #f66;
+            color: #0f0;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    {% for datum in data %}
+        {% include 'li.html' %}
+    {% endfor %}
+</ul>
+<div class="pgs">
+    {{ pages }}
+</div>
+
+</body>
+</html>

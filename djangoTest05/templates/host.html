@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/common.css">
+    <link rel="stylesheet" href="/static/host.css">
+    <script src="/static/jquery-1.12.4.js"></script>
+</head>
+<body>
+<div class="edit">添加</div>
+<div class="mask hide " >
+    <form action="host" method="post">
+        <p>
+            <input type="text" id="hostname" name="hostname" placeholder="主机名">
+        </p>
+        <p>
+            <input type="text" id="ip" name="ip" placeholder="ip">
+        </p>
+        <p>
+            <input type="text" id="port" name="port" placeholder="端口">
+        </p>
+        <p>
+            <select name="code" id="sel">
+                {% for foo in v1 %}
+                    <option value="{{ foo.id }}">{{ foo.caption }}</option>
+                {% endfor %}
+             </select>
+        </p>
+        <p>
+            <input type="submit" value="提交">
+            <div class="btn">click</div>
+            <input type="button" class="cancel" value="取消">
+            <span class="error"></span>
+        </p>
+    </form>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>主机名</th>
+            <th>ip</th>
+            <th>端口</th>
+            <th>业务线名称</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in v %}
+            <tr style="text-align: center" hid="{{ item.nid }}" bid="{{ item.b_id }}">
+                <td>{{ item.hostname }}</td>
+                <td>{{ item.ip }}</td>
+                <td>{{ item.port }}</td>
+                <td>{{ item.b.caption }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    $(function () {
+        $('.edit').on('click',function () {
+            $('.mask').removeClass('hide')
+        });
+        $('.cancel').on('click',function () {
+            $('.mask').addClass('hide')
+        });
+{#        $('.btn').on('click',function () {#}
+{#           $.ajax({#}
+{#               url:"/cmdb/host_ajax/",#}
+{#               type:'POST',#}
+{#               data:{#}
+{#                   'hostname':$('#hostname').val(),#}
+{#                   'ip':$('#ip').val(),#}
+{#                   'port':$('#por').val(),#}
+{#                   'b_id':$('#sel').val()#}
+{#               },#}
+{#               success:function (data) {#}
+{#                   if (data == 'ok'){#}
+{#                       alert(data)#}
+{#                       location.reload()#}
+{#                   }else {#}
+{#                       alert(data)#}
+{#                   }#}
+{#               }#}
+{#           })#}{#        })#}
+{#        $('.btn').on('click',function () {#}
+{#            $.ajax({#}
+{#                url:'/cmdb/host_ajax/',#}
+{#                type:'POST',#}
+{#                data:{#}
+{#                    'hostname':$('#hostname').val(),#}
+{#                    'ip':$("#ip").val(),#}
+{#                    'port':$("#port").val(),#}
+{#                    'b_id':$('#sel').val()#}
+{#                },#}
+{#                success:function (data) {#}
+{#                    if (data=='ok') {#}
+{#                        alert(data);#}
+{#                        location.reload()#}
+{#                    }else {#}
+{#                        alert(data)#}
+{#                    }#}
+{#                }#}
+{#                #}
+{#            })#}
+{#        }) #}
+        $('.btn').on('click',function () {
+            $.ajax({
+                url:'/cmdb/host_ajax/',
+                type:'POST',
+                data:{
+                    'hostname':$('#hostname').val(),
+                    'ip':$("#ip").val(),
+                    'port':$("#port").val(),
+                    'b_id':$('#sel').val()
+                },
+                success:function (data) {
+                    var data = JSON.parse(data);
+                    if (data.status){
+                        location.reload();
+                    }else {
+                        $('.error').html(data.error);
+                    }
+                }
+
+            })
+        })
+    })
+</script>
+
+</body>
+</html>
