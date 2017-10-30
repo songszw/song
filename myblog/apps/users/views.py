@@ -13,6 +13,7 @@ from utils.email_send import send_register_email
 
 
 class CustomBackend(ModelBackend):
+# 用户名/邮箱/账号登陆
     def authenticate(self, username=None, password=None, **kwargs):
         try:
             user = UserProfile.objects.get(Q(username = username)|Q(email=username))
@@ -45,8 +46,8 @@ class LoginView(View):
             return render(request, 'login.html', {'logon_form':login_form})
 
 
-class ActiveUserView(View):
 # 验证用户是否激活
+class ActiveUserView(View):
     def get(self,request,active_code):
         all_records = EmailVerifyRecord.objects.filter(code = active_code)
         if all_records:
@@ -57,7 +58,7 @@ class ActiveUserView(View):
                 user.save()
         else:
             return render(request,'active_fail.html')
-        return redirect('/login/')
+        return render(request,'login.html')
 
 
 # 注册
@@ -70,9 +71,12 @@ class RegisterView(View):
         register_form = RegisterForm(request.POST)
         if register_form.is_valid():
             user_name = request.POST.get('email','')
+            if UserProfile.objects.filter(email=user_name):
+                return render(request,'register.html',{'register_form':register_form,'msg':'用户名已存在'})
             pass_word = request.POST.get('password','')
             user_profile = UserProfile()
             user_profile.username = user_name
+            user_profile.email = user_name
             user_profile.is_active = False
             user_profile.password = make_password(pass_word)
             user_profile.save()

@@ -27,4 +27,5 @@ urlpatterns = [
     url(r'^register/$',RegisterView.as_view(),name='register'),
     url(r'^captcha/', include('captcha.urls')),
     url(r'^active/(?P<active_code>.*)/$',ActiveUserView.as_view(),name='user_active'),
+    url(r'^active/(?P<active_code>.*)/$',ActiveUserView.as_view(),name='user_active'),
 ]
