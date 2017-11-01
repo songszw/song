@@ -1,3 +1,4 @@
+# _*_ encoding:utf-8 _*_
 """
 Django settings for myblog project.
 
@@ -81,6 +82,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.core.context_processors.media',
             ],
         },
     },
@@ -138,16 +140,19 @@ USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
+# 静态文件设置
 STATIC_URL = '/static/'
 STATIC_ROOT='/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'static'),
 )
-
+# 邮箱设置
 EMAIL_HOST = 'smtp-mail.outlook.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'memories.vip@outlook.com'
 EMAIL_HOST_PASSWORD = 'Song0315'
 EMAIL_USE_TLS = True
 EMAIL_FROM = 'memories.vip@outlook.com'
+#图片上传设置路径
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
