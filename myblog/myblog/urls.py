@@ -38,7 +38,7 @@ urlpatterns = [
 
     # 课程机构首页
     url(r'^org_list/$', OrgView.as_view(), name='org_list'),
-
+    # 配置文件上传的访问处理函数
     url(r'^media/(?P<path>.*)$',serve,{'document_root':MEDIA_ROOT})
 
 
