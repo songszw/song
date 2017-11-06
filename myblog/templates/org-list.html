@@ -112,7 +112,7 @@
 	</div>
 	<div class="right companyright">
 			<div class="head">我要学习</div>
-			<form class="rightform" id="jsStayForm">
+			<form class="rightform"  id="jsStayForm">
                 {% csrf_token %}
 				<div>
                     <img src="{% static 'images/rightform1.png' %}"/>
@@ -127,7 +127,7 @@
                     <input type="text" name="course_name" id="companyAddress" placeholder="课程名" maxlength="50" />
                 </div>
                 <p class="error company-tips" id="jsCompanyTips"></p>
-				<input class="btn" type="text" id="jsStayBtn" value="立即咨询 >" />
+				<input class="btn" type="button" id="jsStayBtn" value="立即咨询 >" />
             </form>
 		</div>
 
@@ -158,15 +158,10 @@
                 data:$('#jsStayForm').serialize(),
                 async:true,
                 success:function (data) {
-                    if(data.status == 'success'){
-                        $('#jsStayForm')[0].reset();
-                        alert('提交成功')
-                    }else if(data.status == 'fail'){
-                        $("#jsCompanyTips").html(data.msg)
-                    }
+                    console.log(data)
                 }
             })
         })
-    })
+    });
     </script>
 {% endblock %}
