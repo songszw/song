@@ -12,6 +12,8 @@ class CourseListView(View):
     def get(self,request):
         all_courses = Courses.objects.all().order_by('-add_time')
 
+        hot_courses = Courses.objects.all().order_by('-click_nums')[:3]
+
         # 排序
         sort = request.GET.get('sort', '')
         if sort:
@@ -30,8 +32,26 @@ class CourseListView(View):
 
         return render(request,'course-list.html',{
             'all_courses':courses,
-            'sort':sort
+            'sort':sort,
+            'hot_courses':hot_courses
 
         })
 
 
+class CourseDetailView(View):
+    # 课程详情页
+    def get(self,request,course_id):
+        course = Courses.objects.get(id=int(course_id))
+
+        tag = course.tag
+        if tag:
+            relate_coures = Courses.objects.filter(tag = tag)[:1]
+        else:
+            relate_coures = []
+
+        course.click_nums+=1
+        course.save()
+        return render(request,'course-detail.html',{
+            'course':course,
+            'relate_coures':relate_coures
+        })
