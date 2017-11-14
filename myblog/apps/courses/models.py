@@ -31,6 +31,10 @@ class Courses(models.Model):
         # 获取课程章节数
         return self.lesson_set.all().count()
 
+    def get_course_lesson(self):
+        # 获取课程章节
+        return self.lesson_set.all()
+
     def get_learn_users(self):
         # 获取学习用户
         return self.usercourse_set.all()[:5]
@@ -51,10 +55,16 @@ class Lesson(models.Model):
     def __unicode__(self):
         return self.name
 
+    def get_lesson_video(self):
+        # 获取章节视频
+        return self.video_set.all()
+
 
 class Video(models.Model):
     lesson = models.ForeignKey(Lesson,verbose_name=u'章节')
+    url = models.CharField(max_length=200,verbose_name=u'访问地址',default='')
     name = models.CharField(max_length=100,verbose_name=u'视频名')
+    learn_times = models.IntegerField(default=0, verbose_name=u'学习时长(分钟数)')
     add_time = models.DateTimeField(default=datetime.now,verbose_name=u'添加时间')
 
     class Meta:
