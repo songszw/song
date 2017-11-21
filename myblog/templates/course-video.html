@@ -77,7 +77,7 @@
                             <ul class="video">
                                 {% for item in lesson.get_lesson_video %}
                                     <li>
-                                        <a target="_blank" href='{{ item.url }}' class="J-media-item studyvideo">{{ item.name }} ({{ item.learn_times }})
+                                        <a target="_blank" href='{% url "course:video_play" item.id %}' class="J-media-item studyvideo">{{ item.name }} ({{ item.learn_times }})
                                             <i class="study-state"></i>
                                         </a>
                                     </li>
@@ -99,10 +99,10 @@
                     <div class="box mb40">
                         <h4>资料下载</h4>
                         <ul class="downlist">
-                            {% for course_resourse in course_resourses %}
+                            {% for course_resource in course_resources %}
                                 <li>
-                                    <span ><i class="aui-iconfont aui-icon-file"></i>&nbsp;&nbsp;{{ course_resourse.name }}</span>
-                                    <a href="{{ MEDIA_URL }}{{ course_resourse.download }}" class="downcode" target="_blank" download="" data-id="274" title="">下载</a>
+                                    <span ><i class="aui-iconfont aui-icon-file"></i>&nbsp;&nbsp;{{ course_resource.name }}</span>
+                                    <a href="{{ MEDIA_URL }}{{ course_resource.download }}" class="downcode" target="_blank" download="" data-id="274" title="">下载</a>
                                 </li>
                             {% endfor %}
                         </ul>
@@ -111,7 +111,7 @@
                         <h4>讲师提示</h4>
                         <div class="teacher-info">
                             <a href="/u/315464/courses?sort=publish" target="_blank">
-                                <img src='{{ MEDIA_URL }}{{ course.teacher.image }}' width='80' height='80' />
+                                <img src='{{ MEDIA_URL }}{{ course.teacher.image}}' width='80' height='80' />
                             </a>
                             <span class="tit">
                               <a href="/u/315464/courses?sort=publish" target="_blank">{{ course.teacher.name }}</a>
@@ -139,12 +139,19 @@
                                 <ul class="other-list">
                                     {% for relate_cours in relate_courses %}
                                         <li class="curr">
-                                            <a href="{% url 'course:course_detail' relate_cours.id%}" target="_blank">
+                                            <a href="{% url 'course:course_detail' relate_cours.id %}" target="_blank">
                                                 <img src="{{ MEDIA_URL }}{{ relate_cours.image }}" alt="{{ relate_cours.name }}">
                                                 <span class="name autowrap">{{ relate_cours.name }}</span>
                                             </a>
                                         </li>
                                     {% endfor %}
+
+{#                                   <li class="curr">#}
+{#                                        <a href="course-detail.html" target="_blank">#}
+{#                                            <img src="{% static 'media/courses/2016/11/540e57300001d6d906000338-240-135_n0L8vbw.jpg' %}" alt="django与vuejs实战项目2">#}
+{#                                            <span class="name autowrap">django与vuejs实战项目2</span>#}
+{#                                        </a>#}
+{#                                    </li>#}
                                 </ul>
                             </div>
                             <div class="cp-tab-pannel js-comp-tab-pannel" data-pannel="plan">

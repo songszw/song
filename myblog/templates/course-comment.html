@@ -138,14 +138,14 @@
                                 <div class="cp-tab-pannel js-comp-tab-pannel" data-pannel="course" style="display: block">
                                     <!-- img 200 x 112 -->
                                     <ul class="other-list">
-{#                                        {% for resours in  %}#}
-{#                                            <li>#}
-{#                                                <a href="" target="_blank">#}
-{#                                                    <img src="{{ MEDIA_URL }}{{ resours.course.image }}" alt="Java入门第一季">#}
-{#                                                    <span class="name autowrap">{{ resours.name }}</span>#}
-{#                                                </a>#}
-{#                                            </li>#}
-{#                                        {% endfor %}#}
+                                        {% for relate_cours in relate_courses %}
+                                            <li>
+                                                <a href="{% url 'course:course_comment' relate_cours.id %}" target="_blank">
+                                                    <img src="{{ MEDIA_URL }}{{ relate_cours.image }}" alt="{{ relate_cours.name }}">
+                                                    <span class="name autowrap">{{ relate_cours.name }}</span>
+                                                </a>
+                                            </li>
+                                        {% endfor %}
 
                                     </ul>
                                 </div>
