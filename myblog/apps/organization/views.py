@@ -133,6 +133,7 @@ class OrgTeacherView(View):
         if request.user.is_authenticated():
             if UserFavorite.objects.filter(user=request.user, fav_id=course_org.id, fav_type=2):
                 has_fav = True
+
         return render(request,'org-detail-teachers.html',{
             'all_teachers':all_teachers,
             'course_org':course_org,
