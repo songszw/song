@@ -13,6 +13,7 @@ from utils.mixin_utils import LoginRequiredMixin
 
 class CourseListView(View):
     def get(self, request):
+        current_page='course'
 
         all_courses = Courses.objects.all().order_by('-add_time')
 
@@ -35,9 +36,10 @@ class CourseListView(View):
         courses = p.page(page)
 
         return render(request, 'course-list.html', {
-            'all_courses':courses, 
-            'sort':sort, 
-            'hot_courses':hot_courses
+            'all_courses': courses,
+            'sort': sort,
+            'hot_courses': hot_courses,
+            'current_page': current_page
         })
 
 

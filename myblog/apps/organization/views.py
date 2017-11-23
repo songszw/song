@@ -14,6 +14,7 @@ from operation.models import UserFavorite
 class OrgView(View):
     # 课程机构列表功能
     def get(self,request):
+        current_page = "org"
         # 课程机构
         all_orgs = CourseOrg.objects.all()
         hot_orgs = all_orgs.order_by('-click_nums')[:3]
@@ -53,7 +54,8 @@ class OrgView(View):
             'city_id':city_id,
             'category':category,
             'hot_orgs':hot_orgs,
-            'sort':sort
+            'sort':sort,
+            'current_page':current_page
         })
 
 
