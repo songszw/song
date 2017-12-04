@@ -190,7 +190,12 @@ class TeacherListView(View):
         #搜索
         search_keywords = request.GET.get('keywords', '')
         if search_keywords:
-            all_teachers = all_teachers.filter(Q(name__icontains=search_keywords) | Q(org__icontains=search_keywords))
+            all_teachers = all_teachers.filter(
+                Q(name__icontains=search_keywords) |
+                Q(work_company__icontains=search_keywords) |
+                Q(work_position__icontains=search_keywords)
+
+            )
 
         # 人气排序
         sort = request.GET.get('sort','')
@@ -231,7 +236,6 @@ class TeacherDetailView(View):
         has_org_fav = False
         if UserFavorite.objects.filter(user=request.user, fav_type=2, fav_id=teacher.org.id):
             has_org_fav = True
-
 
         sorted_teacher = Teacher.objects.all().order_by('-click_nums')[:3]
         return render(request,'teacher-detail.html',{
