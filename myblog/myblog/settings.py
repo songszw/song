@@ -154,6 +154,7 @@ EMAIL_HOST_USER = 'memories.vip@outlook.com'
 EMAIL_HOST_PASSWORD = 'Song0315'
 EMAIL_USE_TLS = True
 EMAIL_FROM = 'memories.vip@outlook.com'
+
 #图片上传设置路径
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
