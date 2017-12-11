@@ -5,6 +5,8 @@ from django.contrib.auth.backends import ModelBackend
 from django.db.models import Q
 from django.views.generic.base import View
 from django.contrib.auth.hashers import make_password
+from django.http import HttpResponse
+import json
 
 from .models import UserProfile,EmailVerifyRecord
 from .forms import LoginForm,RegisterForm,ForgetForm,ModifyPwdForm,UploadImageForm
@@ -148,3 +150,24 @@ class UploadImageView(LoginRequiredMixin,View):
         image_form = UploadImageForm(request.POST,request.FILES,instance=request.user)
         if image_form.is_valid():
             image_form.save()
+            return HttpResponse('{"status":"success"}',content_type='application/json')
+        else:
+            return HttpResponse('{"status":"fail"}',content_type='application/json')
+
+
+# 个人中心修改密码
+class UpdatePwdView(View):
+    def post(self,request):
+        modify_form = ModifyPwdForm(request.POST)
+        if modify_form.is_valid():
+            pwd1 = request.POST.get('password1', '')
+            pwd2 = request.POST.get('password2', '')
+            if pwd1 != pwd2:
+                return HttpResponse('{"status":"fail","msg":"；两次密码不一致"}', content_type='application/json')
+            user = request.user
+            user.password = make_password(pwd1)
+            user.save()
+            return HttpResponse('{"status":"success"}', content_type='application/json')
+        else:
+            return HttpResponse(json.dump(modify_form.errors), content_type='application/json')
+
