@@ -163,11 +163,21 @@ class UpdatePwdView(View):
             pwd1 = request.POST.get('password1', '')
             pwd2 = request.POST.get('password2', '')
             if pwd1 != pwd2:
-                return HttpResponse('{"status":"fail","msg":"；两次密码不一致"}', content_type='application/json')
+                return HttpResponse('{"status":"fail","msg":"两次密码不一致"}', content_type='application/json')
             user = request.user
             user.password = make_password(pwd1)
             user.save()
             return HttpResponse('{"status":"success"}', content_type='application/json')
         else:
-            return HttpResponse(json.dump(modify_form.errors), content_type='application/json')
+            return HttpResponse(json.dumps(modify_form.errors), content_type='application/json')
 
+
+class SendEmailCodeView(LoginRequiredMixin,View):
+    # 发送邮箱验证码
+    def get(self,request):
+        email = request.GET.get('email','')
+
+        if UserProfile.objects.filter(email=email):
+            return HttpResponse('{"email":"邮箱已经存在"}',content_type='application/json')
+        send_register_email(email, 'update_email')
+        return HttpResponse('{"status":"success"}',content_type='application/json')

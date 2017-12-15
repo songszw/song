@@ -40,3 +40,10 @@ def send_register_email(email,send_type='register'):
         send_status = send_mail(email_title, email_body, EMAIL_FROM, [email])
         if send_status:
             pass
+    elif send_type == 'update_email':
+        email_title = '个个的小屋邮箱验证码发送'
+        email_body = '您的验证码为:{0}'.format(code)
+
+        send_status = send_mail(email_title, email_body, EMAIL_FROM, [email])
+        if send_status:
+            pass
