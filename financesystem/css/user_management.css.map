@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAU;EACR,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,IAAI;EAChB,MAAM,EAAC,MAAM",
+"sources": ["../sass/user_management.scss"],
+"names": [],
+"file": "user_management.css"
+}
