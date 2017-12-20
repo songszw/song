@@ -3,10 +3,10 @@
   禁止选中文本
 */
 body {
-  background: #f66; }
+  background: url("../img/login/bg.png") no-repeat;
+  background-size: cover; }
 
 .container {
-  width: 1200px;
   height: 100%;
   margin: 0 auto;
   position: relative; }
@@ -53,14 +53,14 @@ body {
         padding-left: 35px;
         padding-right: 10px; }
       .container .login div #username {
-        background: url("../img/login/icon_user.png") left 10px center no-repeat; }
+        background: url("../img/login/icon_zhang_n.png") left 10px center no-repeat; }
       .container .login div #username:focus {
-        background: url("../img/login/icon_user_f.png") left 10px center no-repeat;
+        background: url("../img/login/icon_zhang_h.png") left 10px center no-repeat;
         border: 1px solid #FF8F00; }
       .container .login div #password {
-        background: url("../img/login/icon_mi_h.png") left 10px center no-repeat; }
+        background: url("../img/login/icon_mi_n.png") left 10px center no-repeat; }
       .container .login div #password:focus {
-        background: url("../img/login/icon_mi_b.png") left 10px center no-repeat;
+        background: url("../img/login/icon_mi_h.png") left 10px center no-repeat;
         border: 1px solid #FF8F00; }
       .container .login div .err {
         float: left;
@@ -106,5 +106,7 @@ body {
       line-height: 42px;
       color: #fff;
       font-size: 16px; }
+      .container .login a:hover {
+        background: #ff7f20; }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=login.css.map */

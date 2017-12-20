@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/companyInfo.css">
+</head>
+<body>
+<!--
+    头部
+-->
+<div class="header">
+    <h2>供应链金融管理系统</h2>
+    <ul>
+        <li>你好，<span>管理员</span> ！<a href="">退出</a></li>
+    </ul>
+</div>
+<div class="container">
+    <!--
+        左侧导航栏
+    -->
+    <div class="sideBar">
+        <div class="sideBarList userManagement active">
+            <h2 ><i></i>用户管理 <span></span></h2>
+            <ul class="show">
+                <li><a href="javascript:;">用户列表</a></li>
+                <li class="active"><a href="javascript:;">公司信息</a></li>
+            </ul>
+        </div>
+        <div class="sideBarList financialManagement">
+            <h2><i></i>金融管理 <span></span></h2>
+            <ul>
+                <li><a href="javascript:;">金融信息审核</a></li>
+                <li><a href="javascript:;">金融申请</a></li>
+            </ul>
+        </div>
+        <div class="sideBarList accountInfo">
+            <h2><i></i>账户信息 <span></span></h2>
+            <ul>
+                <li><a href="javascript:;">账户流水</a></li>
+            </ul>
+        </div>
+        <div class="sideBarList dataCenter">
+            <h2><i></i>数据中心 <span></span></h2>
+            <ul>
+                <li><a href="javascript:;">数据统计</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!--
+        正文
+    -->
+    <div class="content">
+        <div class="main">
+            <ul class="mainTitle">
+                <li class="active"><a href="javascript:;">商贸公司</a></li>
+                <li><a href="javascript:;">物流公司</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+</div>
+
+<script src="../js/jquery-1.11.0.js"></script>
+<script>
+    $(function () {
+        /*
+        * 侧边栏点击样式
+        */
+        $('.sideBarList h2').on('click',function () {
+            $('.sideBarList').removeClass('active')
+            $(this).parent().addClass('active')
+        });
+        $('.sideBarList ul li').on('click',function () {
+            $('.sideBarList ul li').removeClass('active')
+            $(this).addClass('active')
+        })
+    })
+</script>
+
+
+</body>
+</html>

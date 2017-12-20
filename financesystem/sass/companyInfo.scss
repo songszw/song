@@ -1,0 +1,199 @@
+@charset "UTF-8";
+/*
+  头部
+*/
+.hide{
+  display: none;
+}
+
+.header{
+  min-width: 1200px;
+  width:100%;
+  overflow: hidden;
+  background:rgba(51,51,51,1);
+  h2{
+    width:216px;
+    background:rgba(255,143,0,1);
+    line-height: 52px;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    float: left;
+  }
+  ul{
+    float: left;
+    width:calc(100% - 216px);
+    background: #333;
+    text-align: right;
+    li{
+      float: right;
+      width: 164px;
+      line-height: 52px;
+      font-size: 14px;
+      margin-right: 33px;
+      color: #fff;
+      a{
+        line-height: 52px;
+        font-size: 14px;
+        color: #fff;
+        margin-left: 30px;
+
+      }
+
+    }
+  }
+
+}
+.container{
+  min-width: 1200px;
+  width:100%;
+  height: calc(100% - 52px);
+  float: left;
+  /*
+    左侧导航栏
+  */
+  .sideBar{
+    width: 216px;
+    height: 100%;
+    background: #333;
+    float: left;
+
+    .sideBarList{
+      width: 216px;
+
+      h2{
+        line-height: 50px;
+        width: 187px;
+        border-left: 3px solid transparent;
+        padding-left: 26px;
+        font-size: 14px;
+        cursor: pointer;
+        color: #fefefe;
+        span{
+          float: right;
+          width: 26px;
+          height: 50px;
+          background: url("../img/common/icon_arrow_right.png") left center no-repeat;
+        }
+        i{
+          display: block;
+          float: left;
+          width: 30px;
+          height: 50px;
+          background: url("../img/common/icon_yong.png") left center no-repeat;
+        }
+        &:hover{
+          background: #444;
+        }
+        
+      }
+
+      ul{
+        overflow: hidden;
+        display: none;
+        li{
+          background: #444;
+          line-height: 50px;
+          width: 157px;
+          border-left: 3px solid transparent;
+          padding-left: 56px;
+          a{
+            font-size: 14px;
+            color: #fefefe;
+          }
+          &:hover{
+            border-left:3px solid #FF8F00;
+          }
+
+        }
+        li.active{
+          border-left:3px solid #FF8F00;
+          a{
+            color: #FF8F00;
+          }
+        }
+      }
+      //ul.show{
+      //  display: block;
+      //}
+
+    }
+    .sideBarList.active{
+      h2{
+        span{
+          background: url("../img/common/icon_arrow_down.png") left center no-repeat;
+        }
+        background: #444;
+
+      }
+      ul{
+        display: block;
+      }
+    }
+    .userManagement h2{
+      i{
+        background: url("../img/common/icon_yong.png") left center no-repeat;
+      }
+
+
+    }
+    .financialManagement h2{
+      i{
+        background: url("../img/common/icon_jin.png") left center no-repeat;
+      }
+
+    }
+    .accountInfo h2{
+      i{
+        background: url("../img/common/icon_zhang.png") left center no-repeat;
+      }
+
+
+    }
+    .dataCenter h2{
+      i{
+        background: url("../img/common/icon_shu.png") left center no-repeat;
+      }
+
+    }
+  }
+  /*
+    正文
+  */
+  .content{
+    float: left;
+    width:calc(100% - 216px);
+    background: #f5f3f0;
+    height: 100%;
+    .main{
+      width:calc(100% - 34px);
+      height:calc(100% - 42px);
+      background: #f1f1f1;
+      margin:20px auto;
+      border:1px solid #ddd;
+
+      .mainTitle{
+        width:100%;
+        height: 50px;
+        border-bottom:1px solid #ddd;
+        li{
+          width:16.8%;
+          line-height: 48px;
+          float: left;
+          text-align: center;
+          border-right:1px solid #ddd;
+          border-top:3px solid transparent;
+          margin-top: -1px;
+          a{
+            font-size: 16px;
+            color: #666;
+          }
+        }
+        li.active{
+          background: #f66;
+        }
+      }
+    }
+
+  }
+}

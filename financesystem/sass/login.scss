@@ -21,10 +21,10 @@
   user-select: none;
 }
 body{
-  background: #f66;
+  background: url("../img/login/bg.png") no-repeat;
+  background-size:cover ;
 }
 .container{
-  width: 1200px;
   height:100%;
   margin:0 auto;
   position: relative;
@@ -68,17 +68,17 @@ body{
         padding-right: 10px;
       }
       #username{
-        background: url("../img/login/icon_user.png") left 10px center no-repeat ;
+        background: url("../img/login/icon_zhang_n.png") left 10px center no-repeat ;
       }
       #username:focus{
-        background: url("../img/login/icon_user_f.png") left 10px center no-repeat;
+        background: url("../img/login/icon_zhang_h.png") left 10px center no-repeat;
         border:1px solid #FF8F00;
       }
       #password{
-        background: url("../img/login/icon_mi_h.png") left 10px center no-repeat;
+        background: url("../img/login/icon_mi_n.png") left 10px center no-repeat;
       }
       #password:focus{
-        background: url("../img/login/icon_mi_b.png") left 10px center no-repeat;
+        background: url("../img/login/icon_mi_h.png") left 10px center no-repeat;
         border:1px solid #FF8F00;
       }
       .err{
@@ -117,7 +117,7 @@ body{
     a{
       width:176px;
       height:42px;
-      background:rgba(255,143,0,1);
+      background:#ff8f00;
       border-radius: 3px ;
       margin: 28px auto 0;
       display: block;
@@ -125,6 +125,9 @@ body{
       line-height: 42px;
       color: #fff;
       font-size: 16px;
+      &:hover{
+        background: #ff7f20;
+      }
     }
     /*
       倒影
