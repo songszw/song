@@ -12,7 +12,10 @@ html, body {
   font-family: 'Arial Normal', 'Arial'; }
 
 body {
-  height: 100%; }
+  min-width: 1150px;
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto; }
 
 img {
   border: 0; }

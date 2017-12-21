@@ -1,4 +1,30 @@
 @charset "UTF-8";
+
+@mixin page{
+  float: left;
+  width: 28px;
+  height: 28px;
+  border:1px solid #dddddd;
+  text-align: center;
+  color: #666;
+  cursor: pointer;
+}
+@mixin hover{
+  background: #eee;
+  color: #FF8F00;
+}
+@mixin noselect{
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+
+  /*
+    Introduced in IE 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
 /*
   头部
 */
@@ -7,8 +33,6 @@
 }
 
 .header{
-  min-width: 1200px;
-  width:100%;
   overflow: hidden;
   background:rgba(51,51,51,1);
   h2{
@@ -45,10 +69,10 @@
 
 }
 .container{
-  min-width: 1200px;
+
+  margin:0 auto;
   width:100%;
   height: calc(100% - 52px);
-  float: left;
   /*
     左侧导航栏
   */
@@ -165,16 +189,22 @@
     width:calc(100% - 216px);
     background: #f5f3f0;
     height: 100%;
+    overflow-y: auto;
     .main{
       width:calc(100% - 34px);
-      height:calc(100% - 42px);
-      background: #f1f1f1;
+      background: #fff;
+      min-height: 850px;
       margin:20px auto;
       border:1px solid #ddd;
 
+
+      /*
+        头部
+      */
       .mainTitle{
         width:100%;
         height: 50px;
+        background: #f1f1f1;
         border-bottom:1px solid #ddd;
         li{
           width:16.8%;
@@ -184,16 +214,217 @@
           border-right:1px solid #ddd;
           border-top:3px solid transparent;
           margin-top: -1px;
+          border-bottom:1px solid transparent;
           a{
             font-size: 16px;
             color: #666;
           }
         }
         li.active{
-          background: #f66;
+          background: #fff;
+          border:1px solid #fff;
+          border-top:3px solid #fe972a;
+          border-left:1px solid #dddddd;
+          border-right:1px solid #ddd;
+          margin-left: -1px;
         }
       }
+
+      /*
+        查询
+      */
+
+      .companySearch{
+        width:calc(100% - 1.4%);
+        height: 88px;
+        background: #fff;
+        padding-left:1.4%;
+        div{
+          float: left;
+          line-height: 34px;
+          margin-right: 4.2%;
+          font-size: 14px;
+          margin-top: 27px;
+          color: #333;
+          input{
+            width: 148px;
+            height: 34px;
+            padding:0 14px;
+            margin-left: 7px;
+          }
+
+        }
+        p{
+          width:98px;
+          height:34px;
+          background:rgba(8,150,250,1);
+          border-radius: 3px ;
+          color: #ffffff;
+          font-size: 14px;
+          line-height: 34px;
+          margin-top: 27px;
+          display: block;
+          float: left;
+          text-align: center;
+          cursor: pointer;
+          &:hover{
+            background: #1280fc;
+          }
+        }
+      }
+
+      /*
+        table表格
+      */
+
+      table{
+        width:calc(100% - 30px);
+        background: #f66;
+        border:1px solid #ddd;
+        margin:0 auto;
+        border-collapse:collapse;
+        table-layout:fixed ;
+        tr{
+          text-align: center;
+          background: #fff;
+          th{
+            border:1px solid #ddd;
+            word-wrap:break-word;
+            color: #666;
+            font-size: 14px;
+            height: 42px;
+            padding:0 12px;
+            background: #efefef;
+            text-align: center;
+            font-weight: normal;
+          }
+
+          td{
+            border:1px solid #ddd;
+            word-wrap:break-word;
+            font-size: 13px;
+            color: #333;
+            padding:10px 0;
+            img{
+              width:80%;
+            }
+            p:nth-child(2){
+              margin:3px 0;
+            }
+          }
+         
+          th:nth-child(1),td:nth-child(1){
+            width:calc(14%);
+          }
+          th:nth-child(2),td:nth-child(2){
+            width:calc(19.8%);
+          }
+          th:nth-child(3),td:nth-child(3){
+            width:9.6%;
+          }
+          th:nth-child(4),td:nth-child(4){
+            width:11.6%;
+          }
+          th:nth-child(5),td:nth-child(5){
+            width:11.6%;
+          }
+          th:nth-child(6),td:nth-child(6){
+            width:11.6%;
+          }
+          th:nth-child(7),td:nth-child(7){
+            width:11.6%;
+          }
+          th:nth-child(8),td:nth-child(8){
+            width:10.2%;
+            p{
+              width: 82px;
+              line-height: 32px;
+              background:#0896fa;
+              border-radius: 3px ;
+              margin:0 auto 6px;
+              font-size: 13px;
+              color: #fff;
+              cursor: pointer;
+              &:hover{
+                background: #1280fc;
+              }
+            }
+          }
+          td:nth-child(1),td:nth-child(2){
+            padding:10px 12px;
+            text-align: left;
+          }
+          td:nth-child(2){
+            padding:10px 12px;
+            text-align: left;
+            color: #666;
+            span{
+              color: #333;
+            }
+          }
+
+        }
+        tr:nth-child(even){
+          background: #f5f5f5;
+        }
+      }
+      
+      /*
+      分页
+      */
+      
+      .pages{
+        height: 55px;
+        width:100%;
+        margin: 30px 0 0 15px;
+
+        p{
+          @include page;
+          line-height: 28px;
+          font-size: 12px;
+          @include noselect;
+          &:hover{
+            @include hover;
+          }
+        }
+        ul{
+          float: left;
+          @include noselect;
+          li{
+            float: left;
+            @include page;
+            font-size: 13px;
+            line-height: 30px;
+            border-left: 0;
+            &.active{
+              background: #eee;
+              color: #FF8F00;
+            }
+            &:hover{
+              @include hover;
+            }
+          }
+          li:nth-last-child(1){
+            border-right: 0;
+          }
+        }
+        div{
+          float: left;
+          margin-left: 30px;
+          font-size: 13px;
+          line-height: 30px;
+          color: #333;
+          .nums{
+            color: #FF8F00;
+            margin:0 2px;
+          }
+          
+        }
+      }
+
+
     }
 
   }
 }
+
