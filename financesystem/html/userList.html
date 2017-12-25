@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/userList.css">
+</head>
+<body>
+<!--
+    头部
+-->
+<div class="header">
+    <h2>供应链金融管理系统</h2>
+    <ul>
+        <li>你好，<span>管理员</span> ！<a href="">退出</a></li>
+    </ul>
+</div>
+<div class="container">
+    <!--
+        左侧导航栏
+    -->
+    <div class="sideBar">
+        <div class="sideBarList userManagement active">
+            <h2 ><i></i>用户管理 <span></span></h2>
+            <ul class="show">
+                <li class="active"><a href="javascript:;">用户列表</a></li>
+                <li><a href="companyInfo.html">公司信息</a></li>
+            </ul>
+        </div>
+        <div class="sideBarList financialManagement">
+            <h2><i></i>金融管理 <span></span></h2>
+            <ul>
+                <li><a href="javascript:;">金融信息审核</a></li>
+                <li><a href="javascript:;">金融申请</a></li>
+            </ul>
+        </div>
+        <div class="sideBarList accountInfo">
+            <h2><i></i>账户信息 <span></span></h2>
+            <ul>
+                <li><a href="javascript:;">账户流水</a></li>
+            </ul>
+        </div>
+        <div class="sideBarList dataCenter">
+            <h2><i></i>数据中心 <span></span></h2>
+            <ul>
+                <li><a href="javascript:;">数据统计</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!--
+        正文
+    -->
+    <div class="content">
+        <div class="main">
+
+            <ul class="mainTitle">
+                <li class="active"><a href="javascript:;">商贸公司</a></li>
+                <li><a href="javascript:;">物流公司</a></li>
+            </ul>
+            <!--
+                查询
+            -->
+            <div class="companySearch">
+                <div>
+                    <span>用户姓名</span>
+                    <input class="username" type="text" value="">
+                </div>
+                <div>
+                    <span>公司名称</span>
+                    <input type="text" class="companyName" value="">
+                </div>
+                <div>
+                    <span>账号</span>
+                    <input class="account" type="text" value="">
+                </div>
+                <div>
+                    <span>用户状态</span>
+                    <select name="" id="" class="userStatus">
+                        <option value="">正常</option>
+                        <option value="">不正常</option>
+                    </select>
+                </div>
+                <p href="javascript:;">查询</p>
+            </div>
+            <!--
+                table表格
+            -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>用户姓名</th>
+                        <th>公司名称</th>
+                        <th>账号</th>
+                        <th>用户状态</th>
+                        <th>注册时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="disable">解禁</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.coj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.coj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.coj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.coj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>13</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.coj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.coj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="">禁用</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>
+                        张三
+                    </td>
+                    <td>北京聚石慧科技有限公司北京聚石慧科技有限公司</td>
+                    <td>hj45852366@126.coj45852366@126.com</td>
+                    <td>正常</td>
+                    <td>2017-11-22</td>
+                    <td>
+                        <p class="disable">解禁</p>
+                    </td>
+                </tr>
+
+
+
+            </table>
+
+            <!--
+                分页
+            -->
+            <div class="pages">
+                <p class="prev">《</p>
+                <ul>
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+                <p class="next active">》</p>
+                <div>共计 <span class="nums">50</span> 条记录，共 <span class="pageCount">10</span>页</div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+<script src="../js/jquery-1.11.0.js"></script>
+<script>
+    $(function () {
+        /*
+        * 侧边栏点击样式
+        */
+        $('.sideBarList h2').on('click',function () {
+            $('.sideBarList').removeClass('active')
+            $(this).parent().addClass('active')
+        });
+        $('.sideBarList ul li').on('click',function () {
+            $('.sideBarList ul li').removeClass('active')
+            $(this).addClass('active')
+        })
+        /*
+        *   mainTitle 切换公司
+        */
+        $('.mainTitle li').on('click',function () {
+            $('.mainTitle li').removeClass('active');
+            $(this).addClass('active')
+        })
+    })
+</script>
+
+
+</body>
+</html>

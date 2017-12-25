@@ -40,7 +40,11 @@ select {
   appearance: none;
   background: url("../img/common/arrow.png") no-repeat scroll right 5px center transparent;
   padding-right: 14px;
-  padding-left: 10px; }
+  padding-left: 10px;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
 
 .hide {
   display: none; }
