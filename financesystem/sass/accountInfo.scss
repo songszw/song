@@ -234,9 +234,9 @@
       }
       .recharge{
 
-        background: #fff;
+        background: #efefef;
         color: #FF8F00;
-        border: 1px solid #ccc;
+        border: 1px solid #ddd;
         &:hover{
           border: 1px solid transparent;
           background: #FF8F00;
@@ -244,8 +244,8 @@
         }
       }
       .raisedCash{
-        border: 1px solid #ccc;
-        background: #fff;
+        border: 1px solid #ddd;
+        background: #efefef;
         color: #0896FA;
         &:hover{
           border: 1px solid transparent;
@@ -317,8 +317,6 @@
             color: #666;
             font-size: 14px;
             height: 36px;
-            line-height: 36px;
-            padding:0 12px;
             background: #efefef;
             text-align: center;
             font-weight: normal;
@@ -330,62 +328,69 @@
             font-size: 13px;
             height: 45px;
             color: #333;
-            overflow:hidden;
-            padding: 10px 0;
-            white-space:nowrap;
-            text-overflow:ellipsis;
-            p{
-              margin:0 auto;
-              overflow:hidden;
-              white-space:nowrap;
-              text-overflow:ellipsis;
-            }
+            padding: 20px 0;
+
+
 
           }
          
           th:nth-child(1),td:nth-child(1){
-            width:17.9%;
+            width:5.4%;
           }
           th:nth-child(2),td:nth-child(2){
-            width:20%;
-            p{
-              width:90%;
-            }
+            width:15.6%;
           }
           th:nth-child(3),td:nth-child(3){
-            width:23%;
+            width:13.8%;
+
+
+          }
+          th:nth-child(4),td:nth-child(4){
+            width:21.7%;
             p{
               width:84%;
               text-align: left;
-              padding-top: 10px;
+              line-height: 26px;
+              overflow: auto;
+              margin:0 auto;
+              white-space: normal;
+              text-overflow: ellipsis;
+            }
 
-            }
-          }
-          th:nth-child(4),td:nth-child(4){
-            width:19.6%;
-            a{
-              color: #0896FA;
-              font-size: 13px;
-              text-decoration: underline;
-            }
           }
           th:nth-child(5),td:nth-child(5){
-            width:12.7%;
+            width:8.7%;
           }
           th:nth-child(6),td:nth-child(6){
-            width:10.1%;
+            width:8.7%;
+          }
+          th:nth-child(7),td:nth-child(7){
+            width:8.7%;
+          }
+          th:nth-child(8),td:nth-child(8){
+            width:8.7%;
             p{
-              width: 82px;
-              line-height: 32px;
-              background:#0896fa;
-              border-radius: 3px ;
-              margin:0 auto 6px;
-              font-size: 13px;
-              color: #fff;
-              cursor: pointer;
-              &:hover{
-                background: #1280fc;
-              }
+              margin-top: 5px;
+            }
+          }
+          th:nth-child(9),td:nth-child(9){
+            width:8.2%;
+
+
+          }
+          td:nth-child(3){
+            text-align: left;
+            padding:0 0.95%;
+          }
+          th:nth-child(9){
+            padding:0 15px;
+          }
+          td:nth-child(9){
+            &.not_receipts{
+              color: #0896FA;
+            }
+            &.receipts{
+              color: #FF8F00;
             }
           }
         }

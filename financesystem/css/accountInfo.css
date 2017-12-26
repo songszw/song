@@ -147,16 +147,16 @@
         border: 1px solid #cccccc;
         border-radius: 3px; }
       .container .content .title .recharge {
-        background: #fff;
+        background: #efefef;
         color: #FF8F00;
-        border: 1px solid #ccc; }
+        border: 1px solid #ddd; }
         .container .content .title .recharge:hover {
           border: 1px solid transparent;
           background: #FF8F00;
           color: #fff; }
       .container .content .title .raisedCash {
-        border: 1px solid #ccc;
-        background: #fff;
+        border: 1px solid #ddd;
+        background: #efefef;
         color: #0896FA; }
         .container .content .title .raisedCash:hover {
           border: 1px solid transparent;
@@ -218,8 +218,6 @@
             color: #666;
             font-size: 14px;
             height: 36px;
-            line-height: 36px;
-            padding: 0 12px;
             background: #efefef;
             text-align: center;
             font-weight: normal; }
@@ -229,48 +227,44 @@
             font-size: 13px;
             height: 45px;
             color: #333;
-            overflow: hidden;
-            padding: 10px 0;
-            white-space: nowrap;
-            text-overflow: ellipsis; }
-            .container .content .main table tr td p {
-              margin: 0 auto;
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis; }
+            padding: 20px 0; }
           .container .content .main table tr th:nth-child(1), .container .content .main table tr td:nth-child(1) {
-            width: 17.9%; }
+            width: 5.4%; }
           .container .content .main table tr th:nth-child(2), .container .content .main table tr td:nth-child(2) {
-            width: 20%; }
-            .container .content .main table tr th:nth-child(2) p, .container .content .main table tr td:nth-child(2) p {
-              width: 90%; }
+            width: 15.6%; }
           .container .content .main table tr th:nth-child(3), .container .content .main table tr td:nth-child(3) {
-            width: 23%; }
-            .container .content .main table tr th:nth-child(3) p, .container .content .main table tr td:nth-child(3) p {
+            width: 13.8%; }
+          .container .content .main table tr th:nth-child(4), .container .content .main table tr td:nth-child(4) {
+            width: 21.7%; }
+            .container .content .main table tr th:nth-child(4) p, .container .content .main table tr td:nth-child(4) p {
               width: 84%;
               text-align: left;
-              padding-top: 10px; }
-          .container .content .main table tr th:nth-child(4), .container .content .main table tr td:nth-child(4) {
-            width: 19.6%; }
-            .container .content .main table tr th:nth-child(4) a, .container .content .main table tr td:nth-child(4) a {
-              color: #0896FA;
-              font-size: 13px;
-              text-decoration: underline; }
+              line-height: 26px;
+              overflow: auto;
+              margin: 0 auto;
+              white-space: normal;
+              text-overflow: ellipsis; }
           .container .content .main table tr th:nth-child(5), .container .content .main table tr td:nth-child(5) {
-            width: 12.7%; }
+            width: 8.7%; }
           .container .content .main table tr th:nth-child(6), .container .content .main table tr td:nth-child(6) {
-            width: 10.1%; }
-            .container .content .main table tr th:nth-child(6) p, .container .content .main table tr td:nth-child(6) p {
-              width: 82px;
-              line-height: 32px;
-              background: #0896fa;
-              border-radius: 3px;
-              margin: 0 auto 6px;
-              font-size: 13px;
-              color: #fff;
-              cursor: pointer; }
-              .container .content .main table tr th:nth-child(6) p:hover, .container .content .main table tr td:nth-child(6) p:hover {
-                background: #1280fc; }
+            width: 8.7%; }
+          .container .content .main table tr th:nth-child(7), .container .content .main table tr td:nth-child(7) {
+            width: 8.7%; }
+          .container .content .main table tr th:nth-child(8), .container .content .main table tr td:nth-child(8) {
+            width: 8.7%; }
+            .container .content .main table tr th:nth-child(8) p, .container .content .main table tr td:nth-child(8) p {
+              margin-top: 5px; }
+          .container .content .main table tr th:nth-child(9), .container .content .main table tr td:nth-child(9) {
+            width: 8.2%; }
+          .container .content .main table tr td:nth-child(3) {
+            text-align: left;
+            padding: 0 0.95%; }
+          .container .content .main table tr th:nth-child(9) {
+            padding: 0 15px; }
+          .container .content .main table tr td:nth-child(9).not_receipts {
+            color: #0896FA; }
+          .container .content .main table tr td:nth-child(9).receipts {
+            color: #FF8F00; }
         .container .content .main table tr:nth-child(even) {
           background: #f5f5f5; }
       .container .content .main .pages {

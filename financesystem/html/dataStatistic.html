@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/dataStatistic.css">
+</head>
+<body>
+<!--
+    头部
+-->
+<div class="header">
+    <h2>供应链金融管理系统</h2>
+    <ul>
+        <li>你好，<span>管理员</span> ！<a href="">退出</a></li>
+    </ul>
+</div>
+<div class="container">
+    <!--
+        左侧导航栏
+    -->
+    <div class="sideBar">
+        <div class="sideBarList userManagement ">
+            <h2 ><i></i>用户管理 <span></span></h2>
+            <ul class="show">
+                <li ><a href="javascript:;">用户列表</a></li>
+                <li><a href="companyInfo.html">公司信息</a></li>
+            </ul>
+        </div>
+        <div class="sideBarList financialManagement ">
+            <h2><i></i>金融管理 <span></span></h2>
+            <ul>
+                <li><a href="financialExamine.html">金融信息审核</a></li>
+                <li ><a href="javascript:;">金融申请</a></li>
+            </ul>
+        </div>
+        <div class="sideBarList accountInfo active">
+            <h2><i></i>账户信息 <span></span></h2>
+            <ul>
+                <li class="active"><a href="javascript:;">账户流水</a></li>
+            </ul>
+        </div>
+        <div class="sideBarList dataCenter">
+            <h2><i></i>数据中心 <span></span></h2>
+            <ul>
+                <li><a href="javascript:;">数据统计</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!--
+        正文
+    -->
+    <div class="content">
+        <div class="userGroup">
+            <div class="title">
+                <p>用户量</p>
+                <p>贸易公司<span></span></p>
+                <p>物流公司<span></span></p>
+            </div>
+            <div class="detail">
+                <div class="option" id="userGroup">
+                </div>
+
+            </div>
+
+        </div>
+        <div class="userLocation">
+            <div class="title">
+                <p>用户地理分布</p>
+            </div>
+            <div class="detail">
+                <div class="option" id="userLocation">
+                </div>
+
+            </div>
+        </div>
+        <div class="userIncrease">
+
+        </div>
+        <div class="loanNumber"></div>
+    </div>
+
+
+</div>
+
+
+<script src="../js/jquery-1.11.0.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script>
+    $(function () {
+        /*
+        * 侧边栏点击样式
+        */
+        $('.sideBarList h2').on('click',function () {
+            $('.sideBarList').removeClass('active')
+            $(this).parent().addClass('active')
+        });
+        $('.sideBarList ul li').on('click',function () {
+            $('.sideBarList ul li').removeClass('active')
+            $(this).addClass('active')
+        })
+        /*
+        *   mainTitle 切换公司
+        */
+        $('.mainTitle li').on('click',function () {
+            $('.mainTitle li').removeClass('active');
+            $(this).addClass('active')
+        });
+
+        /*
+        * 饼图-用户量
+        */
+        echarts.init(document.getElementById('userGroup')).setOption({
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            series : [
+                {
+                    name: '用户量',
+                    type: 'pie',
+                    radius : '70%',
+                    color:['#0896fa','#FF8F00',],
+                    data:[
+                        {value:35, name:'物流公司',},
+                        {value:65, name:'贸易公司'}
+                    ],
+
+                }
+            ]
+        });
+
+        /*
+        * 地图-用户分布
+        */
+        var userLocation = document.getElementById('userLocation');
+        var option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: function(params) {
+                    var arr = [];
+                    for (var j = 0; j < 2; j++) {
+                        var oa = option.series[j].data;
+                        for (var i = 0; i < oa.length; i++) {
+                            if (oa[i] && params.data && params.data.name == oa[i].name && oa[i].name.value != 'undefined') {
+                                arr.push({
+                                    seriesName: option.series[j].name,
+                                    name: oa[i].name,
+                                    value: oa[i].value
+                                });
+                            }
+
+                        }
+                        if (j == 1 && arr != 'null' && arr.length != 0) {
+                            var str = arr[0].name + "<br>";
+                            for (var k = 0; k < arr.length; k++) {
+                                str += arr[k].seriesName + ':' + arr[k].value + "<br>";
+                            }
+                            if (k == arr.length) {
+                                return str;
+                            }
+                        }
+
+                    }
+
+                }
+
+            },
+            visualMap: {
+                textStyle: {
+                    color: '#fff'
+                },
+                min: 0,
+                max: 2000,
+                radius : '70%',
+                left: 'left',
+                top: 'bottom',
+                text: ['最高用户分布', '最低用户分布'], // 文本，默认为数值文本
+                calculable: false,
+                color: ['#00a1e4', '#c4ecf5']
+            },
+            series: [{
+                name: '贸易公司',
+                type: 'map',
+                mapType: 'china',
+                roam: false,
+
+
+                label: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: false
+                    }
+                },
+                data: [{
+                    name: '北京',
+                    value: 111
+                }, {
+                    name: '天津',
+                    value: 112
+                }, {
+                    name: '上海',
+                    value: 113
+                }, {
+                    name: '重庆',
+                    value: 114
+                }, {
+                    name: '河北',
+                    value: 115
+                }, {
+                    name: '河南',
+                    value: 116
+                }, {
+                    name: '云南',
+                    value: 117
+                }, {
+                    name: '辽宁',
+                    value: 118
+                }, {
+                    name: '黑龙江',
+                    value: 119
+                }, {
+                    name: '湖南',
+                    value: 120
+                }, {
+                    name: '安徽',
+                    value: 121
+                }, {
+                    name: '山东',
+                    value: 122
+                }, {
+                    name: '新疆',
+                    value: 123
+                }, {
+                    name: '江苏',
+                    value: 124
+                }, {
+                    name: '浙江',
+                    value: 34254
+                }, {
+                    name: '江西',
+                    value: 1234
+                }, {
+                    name: '湖北',
+                    value: 74645
+                }, {
+                    name: '广西',
+                    value: 2544
+                }, {
+                    name: '甘肃',
+                    value: 234
+                }, {
+                    name: '山西',
+                    value: 5789
+                }, {
+                    name: '内蒙古',
+                    value: 1234
+                }, {
+                    name: '陕西',
+                    value: 5635
+                }, {
+                    name: '吉林',
+                    value: 6734
+                }, {
+                    name: '福建',
+                    value: 6896
+                }, {
+                    name: '贵州',
+                    value: 2562
+                }, {
+                    name: '广东',
+                    value: 25634
+                }, {
+                    name: '青海',
+                    value: 35653
+                }, {
+                    name: '西藏',
+                    value: 2433
+                }, {
+                    name: '四川',
+                    value: 256
+                }, {
+                    name: '宁夏',
+                    value: 1433
+                }, {
+                    name: '海南',
+                    value: 6735
+                }, {
+                    name: '台湾',
+                    value: 78
+                }, {
+                    name: '香港',
+                    value: 123
+                }, {
+                    name: '澳门',
+                    value: 5635
+                }]
+            }, {
+                name: '物流公司',
+                type: 'map',
+                mapType: 'china',
+                label: {
+                    normal: {
+                        show: true
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                data: [{
+                    name: '北京',
+                    value: 2345
+                }, {
+                    name: '天津',
+                    value: 34251
+                }, {
+                    name: '上海',
+                    value: 3673
+                }, {
+                    name: '重庆',
+                    value: 2345
+                }, {
+                    name: '河北',
+                    value: 2345
+                }, {
+                    name: '河南',
+                    value: 23451
+                }, {
+                    name: '云南',
+                    value: 3424
+                }, {
+                    name: '辽宁',
+                    value: 118
+                }, {
+                    name: '黑龙江',
+                    value: 119
+                }, {
+                    name: '湖南',
+                    value: 120
+                }, {
+                    name: '安徽',
+                    value: 121
+                }, {
+                    name: '山东',
+                    value: 122
+                }, {
+                    name: '新疆',
+                    value: 123
+                }, {
+                    name: '江苏',
+                    value: 124
+                }, {
+                    name: '浙江',
+                    value: 3425
+                }, {
+                    name: '江西',
+                    value: 1234
+                }, {
+                    name: '湖北',
+                    value: 748
+                }, {
+                    name: '广西',
+                    value: 678
+                }, {
+                    name: '甘肃',
+                    value: 234
+                }, {
+                    name: '山西',
+                    value: 5789
+                }, {
+                    name: '内蒙古',
+                    value: 1234
+                }, {
+                    name: '陕西',
+                    value: 451
+                }, {
+                    name: '吉林',
+                    value: 432
+                }, {
+                    name: '福建',
+                    value: 68
+                }, {
+                    name: '贵州',
+                    value: 822
+                }, {
+                    name: '广东',
+                    value: 236
+                }, {
+                    name: '青海',
+                    value: 45
+                }, {
+                    name: '西藏',
+                    value: 2433
+                }, {
+                    name: '四川',
+                    value: 256
+                }, {
+                    name: '宁夏',
+                    value: 76
+                }, {
+                    name: '海南',
+                    value: 234
+                }, {
+                    name: '台湾',
+                    value: 78
+                }, {
+                    name: '香港',
+                    value: 123
+                }, {
+                    name: '澳门',
+                    value: 54
+                }]
+            }]
+        }
+        userLocation.setOption(option);
+
+    })
+</script>
+
+
+</body>
+</html>
