@@ -135,18 +135,18 @@
         /*
         * 地图-用户分布
         */
-        var userLocation = document.getElementById('userLocation');
-        var option = {
+        var userLocation =  echarts.init(document.getElementById('userLocation'));
+        var location = {
             tooltip: {
                 trigger: 'item',
                 formatter: function(params) {
                     var arr = [];
                     for (var j = 0; j < 2; j++) {
-                        var oa = option.series[j].data;
+                        var oa = location.series[j].data;
                         for (var i = 0; i < oa.length; i++) {
                             if (oa[i] && params.data && params.data.name == oa[i].name && oa[i].name.value != 'undefined') {
                                 arr.push({
-                                    seriesName: option.series[j].name,
+                                    seriesName: location.series[j].name,
                                     name: oa[i].name,
                                     value: oa[i].value
                                 });
@@ -416,7 +416,7 @@
                 }]
             }]
         }
-        userLocation.setOption(option);
+        userLocation.setOption(location);
 
     })
 </script>
