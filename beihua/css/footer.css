@@ -1,0 +1,67 @@
+.footer {
+  width: 100%;
+  min-width: 1200px;
+  height: 178px;
+  border-top:1px solid #ddd;
+  background: #333;
+}
+.footerContaner{
+	position: relative;
+  width:1200px;
+  height:178px;
+  margin:0 auto;
+  overflow: hidden;
+}
+.download{
+	position: absolute;
+	width: 98px;
+	right: 125px;
+	top: 25px;
+	
+}
+.download img{
+	width: 98px;
+	height: 98px;
+}
+.download p{
+	line-height: 30px;
+	text-align: center;
+	color: #515050;
+}
+.footerContaner .f1 a{
+	color: #fff;
+}
+
+.footerContaner p {
+  margin: 0 auto 13px;
+  text-align: center;
+  color: #8b8b8b;
+  font-size: 14px;
+}
+.footerContaner a {
+  color: #8b8b8b;
+  font-size: 14px;
+}
+
+.footerContaner span {
+  margin: 0 15px;
+}
+
+.tag span{
+  margin: 0 11px;
+}
+.tag a{
+	margin: 0 5px;
+}
+.footerContaner .footerBottom {
+  margin: 18px auto 0;
+  height: 46px;
+  text-align: center;
+}
+.footerContaner .footerBottom img {
+  display: inline-block;
+  width: 130px;
+  height: 46px;
+}
+
+/*# sourceMappingURL=footer.css.map */
