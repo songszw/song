@@ -1,0 +1,113 @@
+
+body{
+    height: 100%;
+    position: relative;
+}
+.confirm_msg{
+    width: 1200px;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #333;
+
+}
+
+.upload_contract{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 14px;
+    span{
+        float: left;
+        line-height: 44px;
+        text-align: right;
+        margin-right: 20px;
+        font-size: 14px;
+        color: #666;
+      }
+    .upload{
+        overflow: hidden;
+        p{
+          width:280px;
+          height:44px;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          float: left;
+          font-size: 14px;
+          line-height: 44px;
+          text-indent: 2em;
+          color: #999;
+          border:1px solid #ccc;
+        }
+
+        a{
+          float: left;
+          width:100px;
+          position: relative;
+          display: inline-block;
+          background: #fff;
+          overflow: hidden;
+          margin-left:10px;
+          color: #1E88C7;
+          font-size: 14px;
+          text-align: center;
+          text-indent: 0;
+          text-decoration: underline;
+          line-height: 40px;
+
+
+          input{
+            cursor: pointer;
+            height:42px;
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+
+          }
+          input:hover{
+            background: #AADFFD;
+            border-color: #78C3F3;
+            cursor: pointer;
+            color: #004974;
+            text-decoration: none;
+          }
+        }
+
+      }
+
+}
+.container{
+    width: 1200px;
+    border: 1px solid #ddd;
+    margin: 30px auto 180px;
+    overflow: hidden;
+    height: 1230px;
+
+    
+    .title{
+        height: 56px;
+        line-height: 56px;
+        border-bottom: 1px solid #ddd;
+        padding-left: 16px;
+        font-weight: normal;
+        background: #F5F5F5;
+        font-size: 16px;
+        color: #333;
+    }
+    .main{
+        width: 100%;
+        padding-top: 30px;
+       
+    }
+  
+   
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

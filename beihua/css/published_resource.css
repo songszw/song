@@ -1,0 +1,74 @@
+.container {
+  width: 1200px;
+  border: 1px solid #ddd;
+  margin: 30px auto;
+  overflow: hidden; }
+  .container .title {
+    height: 56px;
+    line-height: 56px;
+    border-bottom: 1px solid #ddd;
+    padding-left: 19px;
+    font-size: 16px;
+    color: #333; }
+  .container .main {
+    width: 100%;
+    padding-top: 30px; }
+    .container .main .mainList {
+      height: 45px;
+      line-height: 45px; }
+      .container .main .mainList label {
+        float: left;
+        width: 435px;
+        text-align: right;
+        font-size: 16px;
+        color: #333; }
+        .container .main .mainList label span {
+          color: #ff0000; }
+      .container .main .mainList input {
+        width: 426px;
+        height: 40px;
+        float: left;
+        font-size: 16px;
+        color: #333; }
+        .container .main .mainList input.error {
+          border: 1px solid #ff0000; }
+          .container .main .mainList input.error:focus {
+            border: 1px solid #41AAFF; }
+      .container .main .mainList select {
+        width: 148px;
+        height: 42px;
+        margin-right: 8px;
+        font-size: 16px;
+        color: #333; }
+    .container .main .err {
+      height: 30px;
+      width: 466px;
+      margin-left: 435px;
+      color: #ff0000;
+      line-height: 30px;
+      font-size: 16px; }
+    .container .main .btn {
+      width: 182px;
+      height: 48px;
+      background: #FF8F00;
+      text-align: center;
+      line-height: 48px;
+      font-size: 16px;
+      color: #fff;
+      margin: 0 auto;
+      display: block;
+      border-radius: 5px;
+      margin-top: 40px;
+      margin-bottom: 70px; }
+      .container .main .btn:hover {
+        background: #ff7f20; }
+    .container .main .goods_weight i {
+      width: 66px;
+      font-style: normal;
+      text-align: center;
+      float: left; }
+    .container .main .goods_weight input {
+      width: 160px;
+      background: url("../img/icon_calendar.png") right 5px center no-repeat; }
+
+/*# sourceMappingURL=published_resource.css.map */

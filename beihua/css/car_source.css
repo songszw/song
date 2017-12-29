@@ -1,0 +1,70 @@
+.container {
+  width: 1200px;
+  border: 1px solid #ddd;
+  margin: 30px auto; }
+  .container .title {
+    height: 56px;
+    line-height: 56px;
+    border-bottom: 1px solid #ddd;
+    padding-left: 19px;
+    font-size: 16px;
+    color: #333; }
+  .container .about {
+    line-height: 83px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #666; }
+  .container .map {
+    width: 100%;
+    height: 566px;
+    position: relative;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; }
+    .container .map .map_guide {
+      position: absolute;
+      width: 200px;
+      height: 46px;
+      line-height: 46px;
+      right: 40px;
+      top: 28px;
+      background: white;
+      opacity: 0.9;
+      z-index: 100; }
+      .container .map .map_guide p {
+        width: 100px;
+        text-align: center;
+        float: left;
+        font-size: 12px;
+        color: #333; }
+      .container .map .map_guide p:nth-child(1) {
+        text-align: right;
+        background: url("../img/car_source/icon_huo_s.png") left 26px center no-repeat; }
+      .container .map .map_guide p:nth-child(2) {
+        text-indent: 2em;
+        background: url("../img/car_source/icon_che_s.png") left 15px center no-repeat; }
+  .container .btn {
+    height: 145px; }
+    .container .btn a {
+      margin-top: 40px;
+      width: 182px;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      border-radius: 3px;
+      color: #fff;
+      display: block;
+      float: left;
+      font-size: 16px; }
+    .container .btn .release {
+      background: #FF8F00;
+      margin-left: 393px;
+      margin-right: 50px; }
+      .container .btn .release:hover {
+        background: #ff7f20; }
+    .container .btn .cancel {
+      background: #BFBFBF; }
+      .container .btn .cancel:hvoer {
+        background: #bbbbbb; }
+
+/*# sourceMappingURL=car_source.css.map */

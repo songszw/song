@@ -6,9 +6,9 @@
     <title>北化专场</title>
     <link rel="stylesheet" href="../css/pub.css">
     <link rel="stylesheet" href="../css/userData-header.css">
-    <link rel="stylesheet" href="../css/car_source.css">
+    <link rel="stylesheet" href="../css/confirm_order.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <script src="../js/jquery-1.11.0.js"></script>
+  
 </head>
 <body>
 <div class="head">
@@ -57,28 +57,35 @@
     </ul>
 </div>
 
-
+<div class="confirm_msg">确认订单信息并付款</div>
+<div class="upload_contract">
+    <span>上传合同：</span>
+    <div class="upload">
+        <p>合同文件为pdf文件</p>
+        <a href="">
+            <input type="file" class="updateContract gray">选择文件
+        </a>
+    </div>
+</div>
 <!--
-	
-    map
-    
+    container
 -->
 <div class="container">
+   
+    <!--
+        title
+    -->
     <h3 class="title">
-        寻找车源
+        发布货源
     </h3>
-    <p class="about">聚石慧平台拥有海量的车源信息，车辆运输全程可视，放心运货</p>
-    <div class="map" id="map">
-        <div class="map_guide">
-            <p>平台货源</p>
-            <p>平台车辆</p>
-        </div>
+    <!--
+        main
+    -->
+    <div class="main">
 
     </div>
-    <div class="btn">
-        <a class="release" href="javascript:;">发布货源</a>
-        <a class="cancel" href="javascript:;">离开</a>
-    </div>
+
+   
 </div>
 
 <!--
@@ -108,45 +115,9 @@
        </div>
    </div>
 </div>
-<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=3fe7af3726382fb0d90c29bd713c2d04"></script>
-<script>
-    $(function () {
+<script src="../js/jquery-1.11.0.js"></script>
 
-        //搜索产品厂商切换效果
-        $('.seeka li').each(function () {
-            var i = $(this).index();
-            $(this).click(function () {
-                if(i==0){
-                    $(this).addClass('show').siblings().removeClass('show');
-                    $('.seekVal').attr('placeholder','输入要搜索的产品').val('');
-                }else if (i==1){
-                    $(this).addClass('show').siblings().removeClass('show');
-                    $('.seekVal').attr('placeholder','输入要搜索的厂商').val('');
-                }
-            })
-        })
-        
-        //键盘事件
-        $('.seekVal').keypress(function (ev) {
-            var ev = ev || window.event;
-            if(ev && ev.keyCode == 13){
-                alert($(this).val());
-            }
-        });
 
-        //map
-        var map = new AMap.Map('map', {
-                resizeEnable: true,
-                zoom:5,
-                center: [116.397428, 39.90923]
-        });
-      
-        
-    })
- 
-    
-    
-</script>
 </body>
 </html>
 
