@@ -1,11 +1,7 @@
 
-body{
-    height: 100%;
-    position: relative;
-}
 .confirm_msg{
     width: 1200px;
-    margin: 0 auto;
+    margin: 10px auto 30px;
     height: 40px;
     line-height: 40px;
     font-size: 16px;
@@ -45,17 +41,18 @@ body{
         a{
           float: left;
           width:100px;
+          height: 42px;
           position: relative;
           display: inline-block;
-          background: #fff;
+          background:#41AAFF;
+          border-radius: 3px;
           overflow: hidden;
           margin-left:10px;
-          color: #1E88C7;
+          color: #fff;
           font-size: 14px;
           text-align: center;
           text-indent: 0;
-          text-decoration: underline;
-          line-height: 40px;
+          line-height: 42px;
 
 
           input{
@@ -68,13 +65,10 @@ body{
             opacity: 0;
 
           }
-          input:hover{
-            background: #AADFFD;
-            border-color: #78C3F3;
-            cursor: pointer;
-            color: #004974;
-            text-decoration: none;
+          &:hover{
+              background: #3ba5fb;
           }
+         
         }
 
       }
@@ -83,9 +77,8 @@ body{
 .container{
     width: 1200px;
     border: 1px solid #ddd;
-    margin: 30px auto 180px;
+    margin: 30px auto;
     overflow: hidden;
-    height: 1230px;
 
     
     .title{
@@ -98,13 +91,113 @@ body{
         font-size: 16px;
         color: #333;
     }
-    .main{
-        width: 100%;
-        padding-top: 30px;
+   
+            
+
+    .pro_info{
+        width:100%;
+        background: #fff;
+        margin:0 auto;
+        border-collapse:collapse;
+        table-layout:fixed ;
+      
+        tbody{
+            tr:hover{
+            background: #efefef;
+            }
+        }
+        tr{
+            text-align: center;
+            background: #fff;
+            th{
+            word-wrap:break-word;
+            color: #666;
+            font-size: 14px;
+            height: 54px;
+            background: #fff;
+            text-align: center;
+            font-weight: normal;
+            border-bottom: 2px solid #41AAFF;
+            margin: 0 2px;
+            }
+
+            td{
+            border-bottom:1px solid #ddd;
+            word-wrap:break-word;
+            font-size: 13px;
+            height: 74px;
+            color: #333;
+            }
+            
+            th:nth-child(1),td:nth-child(1){
+            width: 257px;
+            }
+            th:nth-child(2),td:nth-child(2){
+              width:346px;
+            }
+            th:nth-child(3),td:nth-child(3){
+              width:340px;
+            }
+            th:nth-child(4),td:nth-child(4){
+             width:254px;
+            }
+        }
+      
+     
+    }
+    .total{
+        width: 1180px;
+        height: 74px;
+        line-height: 74px;
+        text-align: right;
+        font-size: 16px;
+        color: #333;
+        padding-right: 20px;
        
     }
+   
+ 
   
    
+}
+      
+.payable{
+    width: 1180px;
+    text-align: right;
+    font-size: 16px;
+    margin: 0 auto;
+    padding-right: 20px;
+    color: #333;
+    p{
+        width: 1180px;
+        height: 74px;
+        line-height: 74px;
+        em{
+            color: #FF7F20;
+            font-size: 24px;
+        }
+        span{
+            color: #FF7F20;
+            font-size: 24px;
+        }
+    }
+    .confirm{
+        width: 182px;
+        height: 48px;
+        background: #FF8F00;
+        line-height: 48px;
+        text-align: center;
+        color: #fff;
+        display: block;
+        float: right;
+        border-radius: 3px;
+        &:hover{
+            background: #FF7F20
+        }
+    }
+}
+.footer_box{
+    height: 179px;
 }
 .footer{
     position: absolute;

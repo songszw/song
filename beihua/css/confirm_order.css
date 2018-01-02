@@ -1,10 +1,6 @@
-body {
-  height: 100%;
-  position: relative; }
-
 .confirm_msg {
   width: 1200px;
-  margin: 0 auto;
+  margin: 10px auto 30px;
   height: 40px;
   line-height: 40px;
   font-size: 16px;
@@ -39,17 +35,18 @@ body {
     .upload_contract .upload a {
       float: left;
       width: 100px;
+      height: 42px;
       position: relative;
       display: inline-block;
-      background: #fff;
+      background: #41AAFF;
+      border-radius: 3px;
       overflow: hidden;
       margin-left: 10px;
-      color: #1E88C7;
+      color: #fff;
       font-size: 14px;
       text-align: center;
       text-indent: 0;
-      text-decoration: underline;
-      line-height: 40px; }
+      line-height: 42px; }
       .upload_contract .upload a input {
         cursor: pointer;
         height: 42px;
@@ -58,19 +55,14 @@ body {
         right: 0;
         top: 0;
         opacity: 0; }
-      .upload_contract .upload a input:hover {
-        background: #AADFFD;
-        border-color: #78C3F3;
-        cursor: pointer;
-        color: #004974;
-        text-decoration: none; }
+      .upload_contract .upload a:hover {
+        background: #3ba5fb; }
 
 .container {
   width: 1200px;
   border: 1px solid #ddd;
-  margin: 30px auto 180px;
-  overflow: hidden;
-  height: 1230px; }
+  margin: 30px auto;
+  overflow: hidden; }
   .container .title {
     height: 56px;
     line-height: 56px;
@@ -80,9 +72,82 @@ body {
     background: #F5F5F5;
     font-size: 16px;
     color: #333; }
-  .container .main {
+  .container .pro_info {
     width: 100%;
-    padding-top: 30px; }
+    background: #fff;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed; }
+    .container .pro_info tbody tr:hover {
+      background: #efefef; }
+    .container .pro_info tr {
+      text-align: center;
+      background: #fff; }
+      .container .pro_info tr th {
+        word-wrap: break-word;
+        color: #666;
+        font-size: 14px;
+        height: 54px;
+        background: #fff;
+        text-align: center;
+        font-weight: normal;
+        border-bottom: 2px solid #41AAFF;
+        margin: 0 2px; }
+      .container .pro_info tr td {
+        border-bottom: 1px solid #ddd;
+        word-wrap: break-word;
+        font-size: 13px;
+        height: 74px;
+        color: #333; }
+      .container .pro_info tr th:nth-child(1), .container .pro_info tr td:nth-child(1) {
+        width: 257px; }
+      .container .pro_info tr th:nth-child(2), .container .pro_info tr td:nth-child(2) {
+        width: 346px; }
+      .container .pro_info tr th:nth-child(3), .container .pro_info tr td:nth-child(3) {
+        width: 340px; }
+      .container .pro_info tr th:nth-child(4), .container .pro_info tr td:nth-child(4) {
+        width: 254px; }
+  .container .total {
+    width: 1180px;
+    height: 74px;
+    line-height: 74px;
+    text-align: right;
+    font-size: 16px;
+    color: #333;
+    padding-right: 20px; }
+
+.payable {
+  width: 1180px;
+  text-align: right;
+  font-size: 16px;
+  margin: 0 auto;
+  padding-right: 20px;
+  color: #333; }
+  .payable p {
+    width: 1180px;
+    height: 74px;
+    line-height: 74px; }
+    .payable p em {
+      color: #FF7F20;
+      font-size: 24px; }
+    .payable p span {
+      color: #FF7F20;
+      font-size: 24px; }
+  .payable .confirm {
+    width: 182px;
+    height: 48px;
+    background: #FF8F00;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+    display: block;
+    float: right;
+    border-radius: 3px; }
+    .payable .confirm:hover {
+      background: #FF7F20; }
+
+.footer_box {
+  height: 179px; }
 
 .footer {
   position: absolute;

@@ -7,6 +7,13 @@ html,body{
 //
 //
 }
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+  position: relative;
+}
 img{border: 0;}
 ul,ol{list-style: none;}
 input,select,textarea{
