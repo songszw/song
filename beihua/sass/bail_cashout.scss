@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+
+/*
+  container
+*/
+.container{
+  width:1200px;
+  margin:0 auto;
+  .title{
+    width:1180px;
+    height:40px;
+    margin:0 10px 0;
+    ul{
+      color: #666666;
+      overflow: hidden;
+      li{
+        float: left;
+        font-size: 14px;
+        line-height: 40px;
+        margin-right:5px;
+        a{
+            color: #666666;
+        }
+      }
+      span{
+        float: left;
+        font-size: 18px;
+        line-height: 40px;
+        margin-right:3px;
+      }
+    }
+  }
+  .content{
+    width:1200px;
+    overflow: hidden;
+    /*
+      sideBar左侧导航栏
+    */
+    .sideBar{
+      float: left;
+      width:225px;
+      overflow: hidden;
+      border: 1px solid #cccccc;
+      .sideBarMenu{
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+        .sideBarTitle{
+          height:50px;
+          width:225px;
+          img{
+            width:20px;
+            height:20px;
+            float: left;
+            margin-left:20px;
+            margin-top:15px;
+          }
+          span{
+            float: left;
+            font-size: 18px;
+            line-height: 50px;
+            color: #666;
+            margin-left: 10px;
+          }
+        }
+        ul{
+          overflow: hidden;
+          li{
+            width:175px;
+            height: 50px;
+            font-size: 16px;
+            line-height: 50px;
+            padding-left:50px;
+            a{
+             color: #666;   
+            }
+          }
+          li.active{
+            background: #41AAFF;
+            a{
+              color: #fff;
+            }
+          }
+          a:hover{
+            color: #41AAFF;
+          }
+        }
+      }
+
+    }
+    /*
+      main 主题部分
+    */
+    .modifyBefore{
+        width: 954px;
+        background: #fff;
+        height: 568px;
+        float: left;
+        .accountDataTitle{
+            width: 954px;
+            height: 58px;
+            line-height: 58px;
+            color: #333;
+            font-size: 18px;
+            text-indent: 60px;
+            background: url("../img/userData/line.png") center 46px no-repeat;
+        }
+        .attention{
+            font-size: 16px;
+            width: 904px;
+            height: 30px;
+            line-height: 30px;
+            margin-top: 15px;
+            background: url('../img/icon_th.png') left 44px center no-repeat;
+            padding-left: 50px;
+            text-indent: 1em;
+            color: #999;
+
+        }
+        .cashout_list{
+            min-height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+            .cashout_side{
+                float: left;
+                width: 360px;
+                text-align: right;
+            }
+            p{
+                float: left;
+            }
+            input{
+                float: left;
+                width: 160px;
+                height: 40px;
+                margin-top: 4px;
+            }
+            .cash_num{
+                font-size: 24px;
+                color: #FF7F20;
+                margin-right: 2px;
+            }
+            .verifyCode{
+                font-size: 14px;
+                width: 110px;
+                height: 42px;
+                background: #FF7F20;
+                color: #fff;
+                display: block;
+                float: left;
+                text-align: center;
+                line-height: 42px;
+                margin-top: 4px;
+                margin-left: 16px;
+                border-radius: 3px;
+                cursor: pointer;
+                &.active{
+                    background: #BFBFBF;
+                }
+            }
+            
+        }
+        .resetPwd{
+            margin-left: 360px;
+            color: #999;
+            a{
+                color: #41AAFF;
+            }
+        }
+      
+    
+    }
+    
+  }
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.footer_box{
+    height: 179px;
+}

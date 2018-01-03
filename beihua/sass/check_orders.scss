@@ -1,0 +1,166 @@
+
+.confirm_msg{
+    width: 1200px;
+    margin: 10px auto 30px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #333;
+
+}
+
+
+.container{
+    width: 1200px;
+    border: 1px solid #ddd;
+    margin: 30px auto;
+    overflow: hidden;
+
+    
+    .title{
+        height: 56px;
+        line-height: 56px;
+        border-bottom: 1px solid #ddd;
+        padding-left: 16px;
+        font-weight: normal;
+        background: #F5F5F5;
+        font-size: 16px;
+        color: #333;
+    }
+   
+            
+
+    .pro_info{
+        width:100%;
+        background: #fff;
+        margin:0 auto;
+        border-collapse:collapse;
+        table-layout:fixed ;
+      
+        tr{
+            text-align: center;
+            background: #fff;
+            th{
+            word-wrap:break-word;
+            color: #666;
+            font-size: 14px;
+            height: 54px;
+            background: #fff;
+            text-align: center;
+            font-weight: normal;
+            border-bottom: 2px solid #41AAFF;
+            margin: 0 2px;
+            }
+
+            td{
+            border-bottom:1px solid #ddd;
+            word-wrap:break-word;
+            font-size: 16px;
+            height: 74px;
+            color: #333;
+            }
+            
+            th:nth-child(1),td:nth-child(1){
+            width: 224px;
+            }
+            th:nth-child(2),td:nth-child(2){
+              width:314px;
+            }
+            th:nth-child(3),td:nth-child(3){
+              width:212px;
+            }
+            th:nth-child(4),td:nth-child(4){
+             width:223px;
+            }
+            th:nth-child(5),td:nth-child(5){
+             width:223px;
+            }
+        }
+      
+     
+    }
+    .total{
+        width: 1180px;
+        height: 74px;
+        line-height: 74px;
+        text-align: right;
+        font-size: 16px;
+        color: #333;
+        padding-right: 20px;
+       
+    }
+   
+ 
+  
+   
+}
+      
+.pay_list{
+    width: 1180px;
+    text-align: right;
+    font-size: 16px;
+    margin: 0 auto;
+    padding-right: 20px;
+    color: #333;
+    .pay{
+        height: 40px;
+        line-height: 35px;
+        span{
+            float: right;
+        }
+        p{
+            float: right;
+            min-width: 180px;
+            span{
+                font-weight: 600;
+            }
+        }
+
+    }
+    .payable{
+       
+        p{
+            margin: 0;
+            padding: 0;
+            em{
+                color: #FF7F20;
+                font-size: 24px;
+            }
+            span{
+                color: #FF7F20;
+                font-size: 24px;
+            }
+        }
+       
+    }
+
+    .confirm{
+        width: 1180px;
+        height: 48px;
+        margin-bottom: 60px;
+        margin-top: 20px;
+        a{
+            width: 182px;
+            height: 48px;
+            background: #FF8F00;
+            line-height: 48px;
+            text-align: center;
+            color: #fff;
+            display: block;
+            float: right;
+            border-radius: 3px;
+            &:hover{
+                background: #FF7F20
+            }
+        }
+       
+    }
+}
+.footer_box{
+    height: 179px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
