@@ -86,6 +86,9 @@
           }
         }
       }
+      .sideBarMenu:nth-last-child(1){
+          border-bottom: none;
+      }
 
     }
     /*
@@ -94,7 +97,7 @@
     .modifyBefore{
         width: 954px;
         background: #fff;
-        height: 568px;
+        min-height: 568px;
         float: left;
         .accountDataTitle{
             width: 954px;
@@ -117,6 +120,13 @@
             color: #999;
 
         }
+        .prompt{
+          font-size: 16px;
+          color: #333;
+          font-weight: 600;
+          margin-left: 280px;
+          margin-top: 30px;
+        }
         .cashout_list{
             min-height: 50px;
             line-height: 50px;
@@ -136,6 +146,12 @@
                 width: 160px;
                 height: 40px;
                 margin-top: 4px;
+            }
+            .err{
+              color: #f66;
+              float: left;
+              margin-left: 10px;
+              font-size: 14px;
             }
             .cash_num{
                 font-size: 24px;
@@ -162,12 +178,28 @@
             }
             
         }
+        
         .resetPwd{
             margin-left: 360px;
             color: #999;
             a{
                 color: #41AAFF;
             }
+        }
+        .cashoutBtn{
+          width: 126px;
+          height: 40px;
+          margin: 40px auto 70px;
+          display: block;
+          background: #ff8f00;
+          border-radius: 3px;
+          font-size: 16px;
+          color: #fff;
+          text-align: center;
+          line-height: 40px;
+          &:hover{
+            background: #FF7F20;
+          }
         }
       
     

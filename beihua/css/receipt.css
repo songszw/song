@@ -1,0 +1,158 @@
+/*
+  container
+*/
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+  .container .title {
+    width: 1180px;
+    height: 56px; }
+    .container .title ul {
+      color: #666666;
+      overflow: hidden; }
+      .container .title ul li {
+        float: left;
+        font-size: 16px;
+        line-height: 56px;
+        margin-right: 5px; }
+        .container .title ul li a {
+          font-size: 16px;
+          color: #666666; }
+      .container .title ul span {
+        float: left;
+        font-size: 18px;
+        line-height: 40px;
+        margin-right: 3px; }
+  .container .content {
+    width: 1200px;
+    height: 700px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border: 1px solid #ddd; }
+    .container .content h2 {
+      height: 56px;
+      line-height: 56px;
+      border-bottom: 1px solid #ddd;
+      font-size: 16px;
+      color: #333;
+      background: #fafafa;
+      padding-left: 19px; }
+    .container .content .receipt_list {
+      height: 42px;
+      line-height: 42px;
+      font-size: 16px;
+      color: #333; }
+      .container .content .receipt_list .receipt_sideBar {
+        text-align: right;
+        width: 435px;
+        float: left; }
+        .container .content .receipt_list .receipt_sideBar span {
+          color: #f66; }
+      .container .content .receipt_list p {
+        float: left; }
+      .container .content .receipt_list input {
+        float: left;
+        width: 244px;
+        font-size: 16px;
+        color: #333;
+        height: 40px; }
+      .container .content .receipt_list .address {
+        width: 424px; }
+      .container .content .receipt_list select {
+        float: left;
+        width: 150px;
+        height: 42px;
+        font-size: 16px;
+        color: #333;
+        margin-right: 8px; }
+    .container .content .receipt_Top {
+      margin-top: 30px; }
+    .container .content .err {
+      margin-left: 435px;
+      color: #f66;
+      line-height: 20px;
+      height: 20px; }
+    .container .content .confirm {
+      width: 182px;
+      height: 48px;
+      border-radius: 3px;
+      text-align: center;
+      line-height: 48px;
+      color: #fff;
+      background: #ff8f00;
+      display: block;
+      margin: 0 auto;
+      font-size: 16px;
+      margin-top: 20px; }
+      .container .content .confirm:hover {
+        background: #ff7f00; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.footer_box {
+  height: 179px; }
+
+.hide {
+  display: none; }
+
+.trajectory {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10; }
+  .trajectory .trajectory_main {
+    width: 1064px;
+    height: 412px;
+    position: absolute;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff; }
+    .trajectory .trajectory_main .t_title {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      height: 46px;
+      line-height: 46px;
+      background: #fff; }
+      .trajectory .trajectory_main .t_title h3 {
+        font-size: 16px;
+        color: #333;
+        float: left;
+        margin-left: 24px; }
+      .trajectory .trajectory_main .t_title ul {
+        float: right; }
+        .trajectory .trajectory_main .t_title ul li {
+          float: left;
+          width: 40px;
+          height: 40px;
+          background: #fff;
+          margin: 2px;
+          text-align: center;
+          line-height: 40px;
+          cursor: pointer; }
+        .trajectory .trajectory_main .t_title ul .scale {
+          background: url("../img/icon_big.png") center no-repeat; }
+          .trajectory .trajectory_main .t_title ul .scale:hover {
+            background: url("../img/icon_big_h.png") center no-repeat; }
+        .trajectory .trajectory_main .t_title ul .close {
+          background: url("../img/icon_close.png") center no-repeat; }
+          .trajectory .trajectory_main .t_title ul .close:hover {
+            background: url("../img/icon_close_h.png") center no-repeat; }
+    .trajectory .trajectory_main .map {
+      width: 100%;
+      height: 100%; }
+    .trajectory .trajectory_main.active {
+      width: 100%;
+      height: 100%; }
+
+/*# sourceMappingURL=receipt.css.map */

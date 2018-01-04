@@ -9,7 +9,7 @@
   margin:0 auto;
   .title{
     width:1180px;
-    height:60px;
+    height:40px;
     margin:0 10px 0;
     ul{
       color: #666666;
@@ -17,8 +17,8 @@
       li{
         float: left;
         font-size: 14px;
-        line-height: 60px;
-        margin-right:10px;
+        line-height: 40px;
+        margin-right:5px;
         a{
             color: #666666;
         }
@@ -26,8 +26,8 @@
       span{
         float: left;
         font-size: 18px;
-        line-height: 60px;
-        margin-right:10px;
+        line-height: 40px;
+        margin-right:3px;
       }
     }
   }
@@ -97,12 +97,12 @@
     .modifyBefore{
         width: 954px;
         background: #fff;
-        height: 568px;
+        min-height: 568px;
         float: left;
         .accountDataTitle{
             width: 954px;
-            height: 58px;
-            line-height: 58px;
+            height: 60px;
+            line-height: 60px;
             color: #333;
             font-size: 18px;
             text-indent: 60px;
@@ -120,51 +120,63 @@
             color: #999;
 
         }
-        .balance{
+        .prompt{
+          font-size: 16px;
+          color: #333;
+          font-weight: 600;
+          margin-left: 280px;
+          margin-top: 66px;
+        }
+        .cashout_list{
+            min-height: 50px;
+            line-height: 50px;
             font-size: 16px;
-            color: #666;
-            text-align: center;
-            margin: 73px auto 105px;
-            span{
-                font-size: 36px;
-                color: #FF7F20;
-            }
-        }
-        .operation{
-            height: 50px;
-            a{
-                display: block;
+            color: #333;
+            margin-top: 10px;
+            .cashout_side{
                 float: left;
-                width: 124px;
-                height: 38px;
-                border: 1px solid transparent;
-                text-align: center;
-                line-height: 40px;
-                color: #fff;
-                font-size: 16px;
-                border-radius: 3px;
+                width: 360px;
+                text-align: right;
             }
-            .recharge{
-                border: 1px solid #ff8f00;
-                color: #ff8f00;
-                background: #fff;
-                margin: 0 60px 0 340px;
-                &:hover{
-                    color: #fff;
-                    background: #ff8f00;
-                }
+            p{
+                float: left;
             }
-            .raised_cash{
-                border: 1px solid #41AAFF;
-                color: #41AAFF;
-                background: #fff;
-                &:hover{
-                    color: #fff;
-                    background: #41AAFF;
-                }
+            input{
+                float: left;
+                width: 160px;
+                height: 40px;
+                margin-top: 4px;
             }
+          
+            .cash_num{
+                font-size: 24px;
+                color: #FF7F20;
+                margin-right: 2px;
+            }
+     
+            
         }
-       
+        .balance{
+            margin-top:20px;
+        }
+      
+        .cash_add{
+          width: 126px;
+          height: 40px;
+          margin:50px 0 0 360px;
+          display: block;
+          background: #ff8f00;
+          border-radius: 3px;
+          font-size: 16px;
+          color: #fff;
+          text-align: center;
+          line-height: 40px;
+          &:hover{
+            background: #FF7F20;
+          }
+        }
+      
+    
     }
     
   }

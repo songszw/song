@@ -72,6 +72,8 @@
               color: #fff; }
           .container .content .sideBar .sideBarMenu ul a:hover {
             color: #41AAFF; }
+      .container .content .sideBar .sideBarMenu:nth-last-child(1) {
+        border-bottom: none; }
     .container .content .modifyBefore {
       width: 954px;
       background: #fff;
