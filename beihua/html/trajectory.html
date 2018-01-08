@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel='shortcut icon' href='../favicon.ico'>
+    <meta charset="UTF-8">
+    <title>用户中心</title>
+    <link rel="stylesheet" href="../css/pub.css">
+    <link rel="stylesheet" href="../css/trajectory.css">
+    <script src="../js/jquery-1.11.0.js"></script>
+</head>
+<body>
+<div class="aaa">运单轨迹</div>
+<div class="trajectory hide">
+    <div class="trajectory_main">
+        <div class="t_title">
+            <h3>运单轨迹</h3>
+            <ul>
+                <li class="scale"></li>
+                <li class="close"></li>
+            </ul>
+        </div>
+        <div class="map" id="map">
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=3fe7af3726382fb0d90c29bd713c2d04"></script>
+<script>
+
+    $(function () {
+  
+        //map
+            var map = new AMap.Map('map', {
+                resizeEnable: true,
+                zoom:5,
+                center: [116.397428, 39.90923]
+        });
+
+        $('.aaa').on('click',function(){
+            $('.trajectory').removeClass('hide')
+
+        })
+        var onoff = true;
+        $('.scale').on('click',function(){
+            if(onoff){
+                $('.trajectory_main').addClass('active');
+                onoff = false;
+            }else{
+                $('.trajectory_main').removeClass('active')
+                onoff = true;
+            }
+           
+        })
+        $('.close').on('click',function(){
+            $('.trajectory').addClass('hide')
+        })
+
+  
+    })
+ 
+    
+    
+</script>
+</body>
+</html>
+
+
+
+

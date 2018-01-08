@@ -1,0 +1,59 @@
+/*
+  container
+*/
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+  .container .payInfo {
+    margin: 0 auto;
+    height: 100%;
+    padding-top: 160px;
+    overflow: hidden; }
+    .container .payInfo img {
+      float: left;
+      width: 46px;
+      height: 46px;
+      margin-left: 390px; }
+    .container .payInfo div {
+      margin-left: 20px;
+      float: left; }
+      .container .payInfo div h3 {
+        font-size: 18px;
+        color: #333; }
+      .container .payInfo div p {
+        float: left;
+        font-size: 14px;
+        color: #333;
+        line-height: 30px;
+        margin-right: 26px; }
+      .container .payInfo div .amount span {
+        color: #F80D33; }
+      .container .payInfo div .amount i {
+        font-style: normal;
+        color: #F80D33; }
+  .container .return {
+    width: 126px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    background: #ff8f00;
+    font-size: 16px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 3px; }
+    .container .return:hover {
+      background: #ff7f20; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.footer_box {
+  height: 179px; }
+
+.hide {
+  display: none; }
+
+/*# sourceMappingURL=pay.css.map */

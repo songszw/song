@@ -11,23 +11,6 @@
     <script src="../js/jquery-1.11.0.js"></script>
 </head>
 <body>
-    <div class="aaa">dsafdasf</div>
-    <div class="trajectory ">
-        <div class="trajectory_main">
-            <div class="t_title">
-                <h3>运单轨迹</h3>
-                <ul>
-                    <li class="scale"></li>
-                    <li class="close"></li>
-                </ul>
-            </div>
-            <div class="map" id="map">
-               
-            </div>
-            
-        </div>
-    </div>
-
 <div class="head">
     <div class="headCon clearfix">
         <ul class="headL clearfix">
@@ -204,40 +187,7 @@
                 }
             },1000)
       });
-
-
-
-        //map
-            var map = new AMap.Map('map', {
-                resizeEnable: true,
-                zoom:5,
-                center: [116.397428, 39.90923]
-        });
-
-        $('.aaa').on('click',function(){
-            $('.trajectory').removeClass('hide')
-
-        })
-        var onoff = true;
-        $('.scale').on('click',function(){
-            if(onoff){
-                $('.trajectory_main').addClass('active');
-                onoff = false;
-            }else{
-                $('.trajectory_main').removeClass('active')
-                onoff = true;
-            }
-           
-        })
-        $('.close').on('click',function(){
-            $('.trajectory').addClass('hide')
-        })
-
-  
     })
- 
-    
-    
 </script>
 </body>
 </html>

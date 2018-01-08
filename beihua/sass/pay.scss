@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+
+/*
+  container
+*/
+.container{
+  width:1200px;
+  margin:0 auto;
+  .payInfo{
+        margin: 0 auto;
+        height: 100%;
+        padding-top: 160px;
+        overflow: hidden;
+    img{
+        float: left;
+        width: 46px;
+        height: 46px;
+        margin-left: 390px;
+    }
+    div{
+        margin-left: 20px;
+        float: left;
+        h3{
+            font-size: 18px;
+            color: #333;
+        }
+        p{
+            float: left;
+            font-size: 14px;
+            color: #333;
+            line-height: 30px;
+            margin-right: 26px;
+        }
+        .amount span{
+            color: #F80D33;
+        }
+        .amount i{
+            font-style: normal;
+            color: #F80D33;
+        }
+      }
+     
+
+  }
+  .return{
+    width: 126px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    background: #ff8f00;
+    font-size: 16px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 3px;
+    &:hover{
+        background: #ff7f20;
+    }
+}
+  
+  
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.footer_box{
+    height: 179px;
+}
+.hide{
+    display: none;
+}
