@@ -9,7 +9,7 @@ from django.http import HttpResponse
 import json
 
 from .models import UserProfile,EmailVerifyRecord
-from .forms import LoginForm,RegisterForm,ForgetForm,ModifyPwdForm,UploadImageForm
+from .forms import LoginForm,RegisterForm,ForgetForm,ModifyPwdForm,UploadImageForm,UserInfoForm
 from utils.email_send import send_register_email
 from utils.mixin_utils import LoginRequiredMixin
 # Create your views here.
@@ -142,6 +142,15 @@ class UserinfoView(LoginRequiredMixin,View):
     # 用户个人信息
     def get(self,request):
         return render(request,'usercenter-info.html',{})
+    def post(self,requset):
+        user_info_from = UserInfoForm(requset.POST, instance=requset.user)
+        if user_info_from.is_valid():
+            user_info_from.save()
+            return  HttpResponse('{"status":"success"}',content_type='application/json')
+        else:
+            return HttpResponse(json.dumps(user_info_from.errors), content_type='application/json')
+
+
 
 
 class UploadImageView(LoginRequiredMixin,View):
