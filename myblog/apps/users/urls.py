@@ -1,7 +1,8 @@
 # _*_ encoding:utf-8 _*_
 from django.conf.urls import url,include
 
-from .views import UserinfoView,UploadImageView,UpdatePwdView,SendEmailCodeView,UpdateEmailView
+from .views import UserinfoView,UploadImageView,UpdatePwdView,SendEmailCodeView
+from .views import UpdateEmailView,MyCourseView
 
 urlpatterns = [
     # 用户信息
@@ -14,6 +15,8 @@ urlpatterns = [
     url(r'^sendemail_code/$', SendEmailCodeView.as_view(), name='sendemail_code'),
     # 用户个人中心修改邮箱
     url(r'^update_email/$', UpdateEmailView.as_view(), name='update_email'),
+    # 我的课程
+    url(r'^mycourse/$', MyCourseView.as_view(), name='mycourse'),
 
 ]
 
