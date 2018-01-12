@@ -14,6 +14,7 @@ from utils.email_send import send_register_email
 from utils.mixin_utils import LoginRequiredMixin
 from operation.models import UserCourse,UserFavorite
 from organization.models import CourseOrg,Teacher
+from courses.models import Courses
 # Create your views here.
 
 
@@ -245,3 +246,18 @@ class MyFavTeacherView(LoginRequiredMixin,View):
         return render(request, 'usercenter-fav-teacher.html',{
             'teacher_list':teacher_list
         })
+
+
+class MyFavCourseView(LoginRequiredMixin,View):
+    # 我收藏的课程
+    def get(self,request):
+        course_list = []
+        fav_courses = UserFavorite.objects.filter(user = request.user, fav_type=1)
+        for fav_course in fav_courses:
+            course_id = fav_course.fav_id
+            course = Courses.objects.get(id = course_id)
+            course_list.append(course)
+        return render(request, 'usercenter-fav-course.html',{
+            'course_list':course_list
+        })
+
