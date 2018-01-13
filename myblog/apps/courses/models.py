@@ -16,6 +16,7 @@ class Courses(models.Model):
     degree = models.CharField(choices=(('cj', '初级'), ('zj', '中级'), ('gj', '高级')), max_length=5, verbose_name=u'难度')
     learn_times = models.IntegerField(default=0, verbose_name=u'学习时长(分钟数)')
     students = models.IntegerField(default=0, verbose_name=u'学习人数')
+    is_banner = models.BooleanField(default=False, verbose_name=u'是否轮播')
     teacher =models.ForeignKey(Teacher, verbose_name=u'讲师', null=True, blank=True)
     fav_nums = models.IntegerField(default=0, verbose_name=u'收藏人数')
     image = models.ImageField(upload_to='courses/%Y/%m', verbose_name=u'封面图片', max_length=100)

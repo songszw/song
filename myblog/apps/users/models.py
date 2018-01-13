@@ -25,6 +25,12 @@ class UserProfile(AbstractUser):
     def __unicode__(self):
         return self.username
 
+    def unread_nums(self):
+        # 获取用户未读消息数量
+        from operation.models import UserMessage
+        return  UserMessage.objects.filter(user=self.id, has_read=False).count()
+
+
 
 # 邮箱验证
 class EmailVerifyRecord(models.Model):

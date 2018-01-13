@@ -1,20 +1,22 @@
 # _*_ coding:utf-8 _*_
 from django.shortcuts import render,redirect
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.backends import ModelBackend
 from django.db.models import Q
 from django.views.generic.base import View
 from django.contrib.auth.hashers import make_password
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
+from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 import json
 
 from .models import UserProfile,EmailVerifyRecord
 from .forms import LoginForm,RegisterForm,ForgetForm,ModifyPwdForm,UploadImageForm,UserInfoForm
 from utils.email_send import send_register_email
 from utils.mixin_utils import LoginRequiredMixin
-from operation.models import UserCourse,UserFavorite
+from operation.models import UserCourse,UserFavorite,UserMessage
 from organization.models import CourseOrg,Teacher
 from courses.models import Courses
+from .models import Banner
 # Create your views here.
 
 
@@ -52,6 +54,14 @@ class LoginView(View):
             return render(request, 'login.html', {'logon_form':login_form})
 
 
+class LogoutView(View):
+    # 用户登出
+    def get(self,request):
+        logout(request)
+        from django.core.urlresolvers import reverse
+        return HttpResponseRedirect(reverse('index'))
+
+
 # 验证用户是否激活
 class ActiveUserView(View):
     def get(self,request,active_code):
@@ -86,6 +96,12 @@ class RegisterView(View):
             user_profile.is_active = False
             user_profile.password = make_password(pass_word)
             user_profile.save()
+
+            # 写入欢迎注册消息
+            user_message = UserMessage()
+            user_message.user = user_profile
+            user_message.message = '欢迎注册个个的小屋'
+            user_message.save()
 
             send_register_email(user_name,'register')
             return render(request,'login.html')
@@ -261,3 +277,35 @@ class MyFavCourseView(LoginRequiredMixin,View):
             'course_list':course_list
         })
 
+
+class MyMessageView(LoginRequiredMixin,View):
+    # 我的消息
+    def get(self,request):
+        all_message = UserMessage.objects.filter(user=request.user.id)
+        all_unread_messages = UserMessage.objects.filter(user = request.user.id ,has_read=False)
+        for unread_message in all_unread_messages:
+            unread_message.has_read = True
+            unread_message.save()
+        # 分页
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+        p = Paginator(all_message, 1, request=request)
+        messages = p.page(page)
+
+        return render(request,'usercenter-message.html',{
+            'messages':messages,
+
+        })
+
+
+class IndexView(View):
+    # 个个的小屋首页
+    def get(self,request):
+        # 轮播图
+        all_banners = Banner.objects.all().order_by('index')
+        # course = Courses.objects.filter()
+        return render(request,'index.html',{
+            'all_banners':all_banners
+        })
