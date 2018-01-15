@@ -8,6 +8,7 @@ from django.contrib.auth.hashers import make_password
 from django.http import HttpResponse,HttpResponseRedirect
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 import json
+from django.core.urlresolvers import reverse
 
 from .models import UserProfile,EmailVerifyRecord
 from .forms import LoginForm,RegisterForm,ForgetForm,ModifyPwdForm,UploadImageForm,UserInfoForm
@@ -45,7 +46,7 @@ class LoginView(View):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return render(request, 'index.html')
+                    return HttpResponseRedirect(reverse('index'))
                 else:
                     return render(request,'login.html',{'msg':'用户未激活'})
             else:
@@ -58,7 +59,6 @@ class LogoutView(View):
     # 用户登出
     def get(self,request):
         logout(request)
-        from django.core.urlresolvers import reverse
         return HttpResponseRedirect(reverse('index'))
 
 
@@ -305,7 +305,12 @@ class IndexView(View):
     def get(self,request):
         # 轮播图
         all_banners = Banner.objects.all().order_by('index')
-        # course = Courses.objects.filter()
+        courses = Courses.objects.filter(is_banner = False)[:6]
+        banner_courses = Courses.objects.filter(is_banner = False)[:3]
+        course_orgs = CourseOrg.objects.all()[:15]
         return render(request,'index.html',{
-            'all_banners':all_banners
+            'all_banners':all_banners,
+            'courses':courses,
+            'banner_courses':banner_courses,
+            'course_orgs':course_orgs
         })
