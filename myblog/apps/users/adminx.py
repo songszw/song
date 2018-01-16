@@ -1,6 +1,7 @@
 # _*_ coding:utf-8 _*_
 import xadmin
 from xadmin import views
+from xadmin.plugins.auth import UserAdmin
 
 from .models import EmailVerifyRecord,Banner
 
@@ -14,7 +15,6 @@ class GlobalSettings(object):
     site_title = '宋先生的小屋'
     site_footer = '你好丶我姓宋'
     menu_style = 'accordion'
-
 
 
 class EmailVerifyRecordAdmin(object):

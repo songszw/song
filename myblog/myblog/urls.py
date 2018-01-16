@@ -49,8 +49,14 @@ urlpatterns = [
     # 配置文件上传的访问处理函数
     url(r'^media/(?P<path>.*)$',serve,{'document_root':MEDIA_ROOT}),
 
+    # url(r'^static/(?P<path>.*)$',serve,{'document_root':STATIC_ROOT}),
+
     # 个人中心相关url配置
     url(r'^users/', include('users.urls', namespace='users')),
 
 ]
 
+
+# 全局404、500页面配置
+handler404 = 'users.views.page_not_found'
+handler500 = 'users.views.page_error'
