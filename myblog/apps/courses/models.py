@@ -34,6 +34,7 @@ class Courses(models.Model):
     def get_zj_nums(self):
         # 获取课程章节数
         return self.lesson_set.all().count()
+    get_zj_nums.short_description = "章节数"
 
     def get_course_lesson(self):
         # 获取课程章节
@@ -45,6 +46,13 @@ class Courses(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class BannerCourse(Courses):
+    class Meta:
+        verbose_name = '轮播课程'
+        verbose_name_plural = verbose_name
+        proxy = True
 
 
 class Lesson(models.Model):

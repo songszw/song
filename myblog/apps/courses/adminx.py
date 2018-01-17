@@ -1,13 +1,46 @@
 # _*_ coding:utf-8 _*_
 import xadmin
 
-from .models import Courses,Lesson,Video,CourseResource
+from .models import Courses,Lesson,Video,CourseResource,BannerCourse
+
+
+class LessonInline(object):
+    model = Lesson
+    extra = 0
+
+
+class CourseResourceInline(object):
+    model = CourseResource
+    extra = 0
 
 
 class CoursesAdmin(object):
+    list_display = ['name','desc','detail','degree','learn_times','students','fav_nums','image','click_nums','add_time','get_zj_nums']
+    search_fields = ['name','desc','detail','degree','learn_times','students','fav_nums','image','click_nums']
+    list_filter = ['name','desc','detail','degree','learn_times','students','fav_nums','image','click_nums','add_time']
+    ordering = ['-click_nums']      #倒序排列
+    readonly_fields = ['click_nums']    #后台显示只读
+    list_editable = ['degree','desc','detail']   #在当前后台列表也即可修改内容
+    exclude = ['fav_nums'] #是否在后台显示
+    #readonly和exclude是会冲突的，所以里面参数不能放一样的
+    inlines = [LessonInline,CourseResourceInline]
+
+
+class BannerCourseAdmin(object):
     list_display = ['name','desc','detail','degree','learn_times','students','fav_nums','image','click_nums','add_time']
     search_fields = ['name','desc','detail','degree','learn_times','students','fav_nums','image','click_nums']
     list_filter = ['name','desc','detail','degree','learn_times','students','fav_nums','image','click_nums','add_time']
+    ordering = ['-click_nums']      #倒序排列
+    readonly_fields = ['click_nums']    #后台显示只读
+    exclude = ['fav_nums'] #是否在后台显示
+    #readonly和exclude是会冲突的，所以里面参数不能放一样的
+    inlines = [LessonInline,CourseResourceInline]
+
+
+    def queryset(self):
+        qs = super(BannerCourseAdmin, self).queryset()
+        qs = qs.filter(is_banner = True)
+        return qs
 
 
 class LessonAdmin(object):
@@ -28,6 +61,7 @@ class CourseResourceAdmin(object):
 
 
 xadmin.site.register(Courses,CoursesAdmin)
+xadmin.site.register(BannerCourse,BannerCourseAdmin)
 xadmin.site.register(Lesson,LessonAdmin)
 xadmin.site.register(Video,VideoAdmin)
 xadmin.site.register(CourseResource,CourseResourceAdmin)
