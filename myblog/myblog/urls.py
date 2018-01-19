@@ -23,7 +23,7 @@ from django.views.static import serve
 from users.views import LoginView,RegisterView,ActiveUserView,ForgetPwdView,ResetView,ModifyView,LogoutView
 from users.views import IndexView
 from organization.views import OrgView
-from myblog.settings import MEDIA_ROOT
+from myblog.settings import MEDIA_ROOT,STATIC_ROOT
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
@@ -49,7 +49,7 @@ urlpatterns = [
     # 配置文件上传的访问处理函数
     url(r'^media/(?P<path>.*)$',serve,{'document_root':MEDIA_ROOT}),
 
-    # url(r'^static/(?P<path>.*)$',serve,{'document_root':STATIC_ROOT}),
+    url(r'^static/(?P<path>.*)$',serve,{'document_root':STATIC_ROOT}),
 
     # 个人中心相关url配置
     url(r'^users/', include('users.urls', namespace='users')),
