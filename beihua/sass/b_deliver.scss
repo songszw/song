@@ -1,0 +1,388 @@
+.hide{
+    display: none;
+}
+
+.header{
+    width: 100%;
+    min-width: 1200px;
+}
+.headCon{
+    width: 100%;
+    min-width: 1200px;
+    height: 35px;
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    font-family: "Arail", "Tabhoma";
+}
+.headerCon{
+    width: 1200px;
+    height: 35px;
+    margin: 0 auto;
+}
+.header-left{
+    float: left;
+    color: #666;
+    width: 600px;
+    line-height: 35px;
+    font-size: 12px;
+}
+.header-left li a{
+    color: #666;
+}
+.header-left li a:hover{
+    color: #ff7f20;
+}
+
+.header-right{
+    float: right;
+    line-height: 35px;
+}
+.header-right li{
+    float: left;
+    color: #666;
+}
+.code{
+    padding-left: 20px;
+    position: relative;
+    background: url("../img/DetailsPage/phone-b.png") 0px center no-repeat;
+    background-size: 10px 14px;
+}
+.code a {
+    color: #666; }
+.code .img-show {
+    width: 100px;
+    height: 100px;
+    background: #eee;
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+    position: absolute;
+    left: -10px;
+    top: 36px;
+    z-index: 100;
+    display: none;
+}
+.code .img-show img {
+    width: 100%; }
+.code:hover .appDow {
+    color: #ff7f20; }
+.code:hover .img-show {
+    display: block; }
+.header-right li a{
+    color: #666;
+}
+.header-right>span{
+    float: left;
+    margin: 0 10px;
+    color: #666;
+}
+
+.nav-header{
+    width: 100%;
+    min-width: 1200px;
+    height: 130px;
+    background: #fafafa;
+    border-bottom: 2px solid #41AAFF;
+}
+.nav-headerCon{
+    width: 1200px;
+    margin: 0 auto;
+}
+.nav-headerBox{
+    width: 1200px;
+}
+.nav-logo{
+    width: 425px;
+    float: left;
+}
+.nav-logo li{
+    float: left;
+}
+.nav-logo li:nth-child(2){
+    width: 200px;
+    height: 60px;
+    border-left: 1px solid #CCCCCC;
+    line-height: 60px;
+    font-size: 28px;
+    margin-top: 25px;
+    text-align: center;
+    color: #41AAFF;
+}
+.seek{
+    width: 544px;
+    height: 100px;
+    float: right;
+    overflow: hidden;
+    margin: 10px 0 0 30px;
+}
+.seeka{
+    height: 30px;
+    line-height: 30px;
+}
+.seeka li{
+    width: 50px;
+    height: 30px;
+    float: left;
+    background: #eee;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+.seeka .show{
+    color: #fff;
+    background: #41aaff;
+}
+.seekb{
+    width: 544px;
+    height: 48px;
+    position: relative;
+}
+.seekb_a{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.seekb_b{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.seekb_a input{
+    width: 410px;
+    height: 44px;
+    float: left;
+    line-height: 44px;
+    background: #fff url("../img/DetailsPage/search.png") 20px center no-repeat;
+    border: 2px solid #41aaff;
+    text-indent: 46px;
+    font-family: simhei;
+    font-size: 14px;
+}
+.seekb_a span{
+    width: 86px;
+    line-height: 48px;
+    float: left;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background: #41aaff;
+    cursor: pointer;
+
+}
+.seekb_b input{
+    width: 410px;
+    height: 44px;
+    float: left;
+    line-height: 44px;
+    background: #fff url("../img/DetailsPage/search.png") 20px center no-repeat;
+    border: 2px solid #41aaff;
+    text-indent: 46px;
+    font-size: 14px;
+    font-family: simhei;
+}
+.seekb_b span{
+    width: 86px;
+    line-height: 48px;
+    float: left;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background: #41aaff;
+    cursor: pointer;
+
+}
+.seekc{
+    line-height: 32px;
+    a{
+        color: #ff7f1d;
+    }
+}
+
+.nav-title{
+    width: 1200px;
+    height: 38px;
+    line-height: 38px;
+    li{
+        float: left;
+        color: #333;
+        height: 35px;
+        padding: 0 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-bottom: 3px solid transparent;
+        a{
+            color: #333;
+            font-size: 16px;
+            border-bottom: 3px solid transparent;
+        }
+    }
+}
+
+
+
+
+
+/*
+    content 
+*/
+
+.content{
+    margin: 0 auto;
+    width: 1200px;
+
+    .nav-text{
+        width: 1200px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 14px;
+        color: #666;
+    }
+    
+    .beihua{
+        width: 1198px;
+        background: #fff;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        .b_title{
+            line-height: 50px;
+            font-size: 16px;
+            color: #333;
+            overflow: hidden;
+            background: #fff;
+           
+            .goods{
+                float: left;
+                width: 150px;
+                height: 50px;
+                text-align: center;
+                cursor: pointer;
+                font-size: 16px;
+                color: #333;
+                border-right: 1px solid #ccc;
+                a{
+                   color: #333; 
+                }
+
+                &.active{
+                    a{
+                        color: #41AAFF; 
+                    }
+                   
+                }
+                &:hover{
+                    a{
+                        color: #41AAFF; 
+                    }
+                }
+            }
+            .b_more{
+                float: right;
+                font-size: 12px;
+                margin-right: 22px;
+                color: #999; 
+                span{
+                    color: #FF7F20;
+                }
+            }
+        }
+    
+    
+        .b_deliver_goods{
+          width:100%;
+          background: #fff;
+          margin:0 auto;
+          border-collapse:collapse;
+          table-layout:fixed ;
+          thead{
+              border: 1px solid #ddd;
+          }
+          tbody{
+            tr:hover{
+              background: #efefef;
+            }
+             border: 1px solid #ddd;
+          }
+          tr{
+            text-align: center;
+            background: #fff;
+            th{
+              word-wrap:break-word;
+              color: #666;
+              font-size: 14px;
+              height: 50px;
+              background: #F5F5F5;
+              text-align: center;
+              font-weight: normal;
+            }
+    
+            td{
+              border-bottom:1px solid #ddd;
+              word-wrap:break-word;
+              font-size: 13px;
+              height: 60px;
+              color: #333;
+              padding: 6px;
+            }
+           
+            th:nth-child(1),td:nth-child(1){
+              width: 100px;
+              padding: 0 40px;
+            }
+            th:nth-child(2),td:nth-child(2){
+              width:150px;
+            }
+            th:nth-child(3),td:nth-child(3){
+              width:160px;
+            }
+            th:nth-child(4),td:nth-child(4){
+              width:150px;
+            }
+            th:nth-child(5),td:nth-child(5){
+              width: 80px;
+              padding: 0 12px;
+            }
+            th:nth-child(5){
+              width: 70px;
+              padding: 0 10px;
+            }
+            td:nth-child(5){
+                color: #79c039;
+            }
+            th:nth-child(6),td:nth-child(6){
+              width:140px;
+            }
+            th:nth-child(6){
+              width: 70px;
+              padding: 0px 30px;
+          }
+            th:nth-child(7),td:nth-child(7){
+              width:155px;
+            }
+            th:nth-child(8),td:nth-child(8){
+              width:182px;
+              a{
+                  width: 60px;
+                  height: 30px;
+                  display: inline-block;
+                  background: #fff;
+                  border: 1px solid #fb9f61;
+                  color: #fb9f61;
+                  line-height: 32px;
+                  text-align: center;
+                  border-radius: 3px;
+                  &:hover{
+                      background: #fb9f61;
+                      border: 1px solid #fb9f61;
+                      color: #fff;
+                  }
+                  &.active{
+                      background: #fb9f61;
+                      border: 1px solid #fb9f61;
+                      color: #fff;
+                  }
+              }
+            }
+          }
+        }
+    }
+}
