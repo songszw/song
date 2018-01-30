@@ -63,4 +63,10 @@ a {
 .v_hide {
   visibility: hidden; }
 
+.footer_box {
+  height: 200px; }
+
+.hide {
+  display: none; }
+
 /*# sourceMappingURL=pub.css.map */

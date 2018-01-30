@@ -1,5 +1,14 @@
-.hide {
-  display: none; }
+html {
+  min-height: 100%;
+  position: relative; }
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+
+.footer_box {
+  height: 200px; }
 
 .header {
   width: 100%;
@@ -224,39 +233,116 @@
     line-height: 60px;
     font-size: 14px;
     color: #666; }
+  .content .b_title {
+    height: 80px;
+    font-size: 16px;
+    color: #333;
+    overflow: hidden;
+    background: #fff; }
+    .content .b_title .goods {
+      position: relative;
+      margin-top: 20px;
+      float: left;
+      width: 134px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 16px;
+      color: #333;
+      border-radius: 5px; }
+      .content .b_title .goods a {
+        color: #333; }
+      .content .b_title .goods.active {
+        background: #41AAFF; }
+        .content .b_title .goods.active a {
+          color: #fff; }
+        .content .b_title .goods.active::before {
+          content: '';
+          position: absolute;
+          width: 0px;
+          height: 0px;
+          bottom: -8px;
+          left: 50%;
+          margin-left: -8px;
+          border-top: 8px solid #41AAFF;
+          border-right: 8px solid transparent;
+          border-left: 8px solid transparent; }
+      .content .b_title .goods:hover {
+        background: #41AAFF; }
+        .content .b_title .goods:hover a {
+          color: #fff; }
+        .content .b_title .goods:hover::before {
+          content: '';
+          position: absolute;
+          width: 0px;
+          height: 0px;
+          bottom: -8px;
+          left: 50%;
+          margin-left: -8px;
+          border-top: 8px solid #41AAFF;
+          border-right: 8px solid transparent;
+          border-left: 8px solid transparent; }
+    .content .b_title .b_more {
+      float: right;
+      font-size: 12px;
+      margin-right: 22px;
+      line-height: 80px;
+      color: #999; }
+      .content .b_title .b_more span {
+        color: #FF7F20; }
   .content .beihua {
     width: 1198px;
     background: #fff;
     margin: 0 auto;
     border: 1px solid #ccc; }
-    .content .beihua .b_title {
-      line-height: 50px;
-      font-size: 16px;
-      color: #333;
-      overflow: hidden;
-      background: #fff; }
-      .content .beihua .b_title .goods {
+    .content .beihua .b_category {
+      width: 100%;
+      height: 44px;
+      border-bottom: 1px solid #ddd; }
+      .content .beihua .b_category li {
         float: left;
-        width: 150px;
-        height: 50px;
-        text-align: center;
+        width: 88px;
+        margin: 0 22px;
+        color: #999;
+        font-size: 14px;
+        height: 45px;
         cursor: pointer;
-        font-size: 16px;
-        color: #333;
-        border-right: 1px solid #ccc; }
-        .content .beihua .b_title .goods a {
+        text-align: center; }
+        .content .beihua .b_category li p {
+          margin-top: 10px; }
+        .content .beihua .b_category li em {
+          text-align: center;
+          width: 0px;
+          display: inline-block;
+          transition: 1s all cubic-bezier(0.46, 1, 0.23, 1);
+          background-color: transparent;
+          padding: 1px; }
+          .content .beihua .b_category li em.active {
+            width: 88px;
+            background-color: #41AAFF; }
+        .content .beihua .b_category li.active {
           color: #333; }
-        .content .beihua .b_title .goods.active a {
-          color: #41AAFF; }
-        .content .beihua .b_title .goods:hover a {
-          color: #41AAFF; }
-      .content .beihua .b_title .b_more {
+          .content .beihua .b_category li.active em {
+            width: 88px;
+            background-color: #41AAFF; }
+      .content .beihua .b_category span {
+        float: left;
+        line-height: 44px;
+        color: #eee; }
+      .content .beihua .b_category .b_switch {
+        line-height: 44px;
+        color: #41AAFF;
+        cursor: pointer;
         float: right;
-        font-size: 12px;
-        margin-right: 22px;
-        color: #999; }
-        .content .beihua .b_title .b_more span {
-          color: #FF7F20; }
+        font-size: 14px;
+        padding-right: 20px;
+        margin-right: 55px;
+        background: url("../img/icon_switch.png") right center no-repeat; }
+    .content .beihua .b_msg {
+      line-height: 38px;
+      color: #FF7F20;
+      padding-left: 22px;
+      font-size: 12px; }
     .content .beihua .b_deliver_goods {
       width: 100%;
       background: #fff;
@@ -331,5 +417,9 @@
               background: #fb9f61;
               border: 1px solid #fb9f61;
               color: #fff; }
+        .content .beihua .b_deliver_goods tr.active {
+          background: url("../img/icon_vip.png") left top no-repeat; }
+          .content .beihua .b_deliver_goods tr.active:hover {
+            background: url("../img/icon_vip.png") left top no-repeat #efefef; }
 
 /*# sourceMappingURL=b_deliver.css.map */
