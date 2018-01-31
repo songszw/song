@@ -1,0 +1,208 @@
+.marsk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100; }
+  .marsk .marsk_box {
+    width: 510px;
+    height: 280px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .marsk .marsk_box .marsk_title {
+      width: 450px;
+      height: 46px;
+      line-height: 46px;
+      margin: 0 auto;
+      border-bottom: 1px solid #ddd; }
+      .marsk .marsk_box .marsk_title .m_title {
+        float: left;
+        text-align: left;
+        line-height: 46px;
+        font-size: 16px;
+        color: #666666; }
+      .marsk .marsk_box .marsk_title .m_close {
+        width: 30px;
+        height: 30px;
+        float: right;
+        margin-top: 10px;
+        cursor: pointer;
+        background: url("../img/icon_close.png") center no-repeat; }
+        .marsk .marsk_box .marsk_title .m_close:hover {
+          background: url("../img/icon_close_h.png") center no-repeat; }
+    .marsk .marsk_box .m_con {
+      margin: 0 auto;
+      text-align: center;
+      line-height: 140px;
+      font-size: 18px;
+      color: #333; }
+    .marsk .marsk_box .m_btn {
+      width: 98px;
+      height: 38px;
+      line-height: 38px;
+      text-align: center;
+      font-size: 16px;
+      color: #fff;
+      display: inline-block;
+      border-radius: 5px; }
+    .marsk .marsk_box .m_confirm {
+      background: #41AAFF;
+      margin: 0 60px 0 127px; }
+      .marsk .marsk_box .m_confirm:hover {
+        background: #3ba5fb; }
+    .marsk .marsk_box .m_cancel {
+      background: #ddd; }
+      .marsk .marsk_box .m_cancel:hover {
+        background: #cdcdcd; }
+
+.confirm_msg {
+  width: 1200px;
+  margin: 10px auto 30px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #333; }
+
+.upload_contract {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 14px; }
+  .upload_contract span {
+    float: left;
+    line-height: 44px;
+    text-align: right;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #666; }
+  .upload_contract .upload {
+    overflow: hidden; }
+    .upload_contract .upload p {
+      width: 280px;
+      height: 44px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      float: left;
+      font-size: 14px;
+      line-height: 44px;
+      text-indent: 2em;
+      color: #999;
+      border: 1px solid #ccc; }
+    .upload_contract .upload a {
+      float: left;
+      width: 100px;
+      height: 42px;
+      position: relative;
+      display: inline-block;
+      background: #41AAFF;
+      border-radius: 3px;
+      overflow: hidden;
+      margin-left: 10px;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      text-indent: 0;
+      line-height: 42px; }
+      .upload_contract .upload a input {
+        cursor: pointer;
+        height: 42px;
+        position: absolute;
+        font-size: 100px;
+        right: 0;
+        top: 0;
+        opacity: 0; }
+      .upload_contract .upload a:hover {
+        background: #3ba5fb; }
+
+.nav {
+  width: 1200px;
+  line-height: 60px;
+  margin: 0 auto; }
+  .nav .nav-text {
+    color: #666; }
+    .nav .nav-text a {
+      color: #666; }
+
+.order_status {
+  width: 1200px;
+  height: 178px;
+  border: 1px solid #ddd;
+  margin: 0 auto; }
+  .order_status .o_status, .order_status .o_number {
+    padding-left: 144px;
+    line-height: 36px; }
+  .order_status .o_status {
+    margin-top: 45px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    background: url("../img/icon_attention.png") left 90px center no-repeat; }
+  .order_status .o_number {
+    font-size: 14px;
+    color: #666; }
+
+.order_info {
+  width: 1200px;
+  border: 1px solid #ddd;
+  margin: 30px auto 30px;
+  overflow: hidden; }
+  .order_info .title {
+    height: 54px;
+    line-height: 54px;
+    border-bottom: 1px solid #ddd;
+    padding-left: 16px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #333; }
+  .order_info .pro_info {
+    width: 100%;
+    background: #fff;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed; }
+    .order_info .pro_info thead tr {
+      background: #E6F4FF; }
+    .order_info .pro_info tr {
+      text-align: center;
+      background: #fff; }
+      .order_info .pro_info tr th {
+        word-wrap: break-word;
+        color: #666;
+        font-size: 14px;
+        height: 54px;
+        text-align: center;
+        font-weight: normal;
+        margin: 0 2px; }
+      .order_info .pro_info tr td {
+        border-bottom: 1px solid #ddd;
+        word-wrap: break-word;
+        font-size: 14px;
+        height: 142px;
+        color: #333; }
+      .order_info .pro_info tr th:nth-child(1), .order_info .pro_info tr td:nth-child(1) {
+        width: 224px; }
+      .order_info .pro_info tr th:nth-child(2), .order_info .pro_info tr td:nth-child(2) {
+        width: 314px; }
+      .order_info .pro_info tr th:nth-child(3), .order_info .pro_info tr td:nth-child(3) {
+        width: 212px; }
+      .order_info .pro_info tr th:nth-child(4), .order_info .pro_info tr td:nth-child(4) {
+        width: 223px; }
+      .order_info .pro_info tr th:nth-child(5), .order_info .pro_info tr td:nth-child(5) {
+        width: 224px; }
+
+.footer_box {
+  height: 179px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+/*# sourceMappingURL=order_detailA.css.map */

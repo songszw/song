@@ -32,6 +32,8 @@
       text-indent: 2em;
       color: #999;
       border: 1px solid #ccc; }
+      .upload_contract .upload p.active {
+        color: #333; }
     .upload_contract .upload a {
       float: left;
       width: 100px;
@@ -57,6 +59,15 @@
         opacity: 0; }
       .upload_contract .upload a:hover {
         background: #3ba5fb; }
+
+.nav {
+  width: 1200px;
+  line-height: 60px;
+  margin: 0 auto; }
+  .nav .nav-text {
+    color: #666; }
+    .nav .nav-text a {
+      color: #666; }
 
 .container {
   width: 1200px;
@@ -100,13 +111,15 @@
         height: 74px;
         color: #333; }
       .container .pro_info tr th:nth-child(1), .container .pro_info tr td:nth-child(1) {
-        width: 257px; }
+        width: 224px; }
       .container .pro_info tr th:nth-child(2), .container .pro_info tr td:nth-child(2) {
-        width: 346px; }
+        width: 314px; }
       .container .pro_info tr th:nth-child(3), .container .pro_info tr td:nth-child(3) {
-        width: 340px; }
+        width: 212px; }
       .container .pro_info tr th:nth-child(4), .container .pro_info tr td:nth-child(4) {
-        width: 254px; }
+        width: 223px; }
+      .container .pro_info tr th:nth-child(5), .container .pro_info tr td:nth-child(5) {
+        width: 224px; }
   .container .total {
     width: 1180px;
     height: 74px;
@@ -154,4 +167,4 @@
   bottom: 0;
   left: 0; }
 
-/*# sourceMappingURL=confirm_order.css.map */
+/*# sourceMappingURL=confirm_orderC.css.map */

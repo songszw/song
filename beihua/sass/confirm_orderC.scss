@@ -36,6 +36,9 @@
           text-indent: 2em;
           color: #999;
           border:1px solid #ccc;
+          &.active{
+              color: #333;
+          }
         }
 
         a{
@@ -74,6 +77,18 @@
       }
 
 }
+.nav{
+    width: 1200px;
+    line-height: 60px;
+    margin: 0 auto;
+    .nav-text{
+        color: #666;
+        a{
+            color: #666;
+        }
+    }
+}
+
 .container{
     width: 1200px;
     border: 1px solid #ddd;
@@ -130,16 +145,19 @@
             }
             
             th:nth-child(1),td:nth-child(1){
-            width: 257px;
+            width: 224px;
             }
             th:nth-child(2),td:nth-child(2){
-              width:346px;
+              width:314px;
             }
             th:nth-child(3),td:nth-child(3){
-              width:340px;
+              width:212px;
             }
             th:nth-child(4),td:nth-child(4){
-             width:254px;
+             width:223px;
+            }
+            th:nth-child(5),td:nth-child(5){
+             width:224px;
             }
         }
       
