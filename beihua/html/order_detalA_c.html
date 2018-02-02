@@ -6,7 +6,7 @@
     <title>北化专场</title>
     <link rel="stylesheet" href="../css/pub.css">
     <link rel="stylesheet" href="../css/userData-header.css">
-    <link rel="stylesheet" href="../css/order_detailC.css">
+    <link rel="stylesheet" href="../css/order_detailA_c.css">
     <link rel="stylesheet" href="../css/footer.css">
   
 </head>
@@ -70,10 +70,9 @@
         我的订单
     </p>
 </div>
-    
 
 <div class="order_status">
-    <div class="o_status attention">当前订单状态：<span>已付款</span></div>
+    <div class="o_status complete">当前订单状态：<span>已完成</span></div>
     <div class="o_number">订单号:<span>2016028334182234</span></div>
 </div>
 
@@ -94,15 +93,14 @@
     <!--
         main
     -->
-    <table class="pro_infoC">
+    <table class="pro_infoA">
         <thead>
             <tr>
                 <th>商品详情</th>
                 <th>数量(吨)</th>
-                <th>挂牌价(元/吨)</th>
+                <th>结算量(吨)</th>
+                <th>单价(元/吨)</th>
                 <th>付款方式</th>
-                <th>预付款(元)</th>
-                <th>付款时间</th>
             </tr>
         </thead>
         
@@ -120,17 +118,29 @@
                 <p>分配量：<span>2000</span>
                 </p>
             </td>
-            <td>2000</td>
-            <td>先货后款</td>
-            <td>600000.00</td>
+            <td>待确认</td>
             <td>
-                <p>2017-12-21</p>
-                <p>17:35:45</p>    
+                <p>起拍价：<span>2000</span>
+                </p>
+                <p>报价：<span>2000</span>
+                </p>
             </td>
+            <td>先货后款</td>
         </tr>
     </table>
    
 </div>
+<div class="pay_list">
+    <div class="pay">
+        <p><em>￥</em><span>30000.32</span></p>
+        <span>总金额：</span>
+    </div>
+    <div class="payable pay">
+        <p><em>￥</em><span>9392948.32</span></p>
+        <span>实付款：</span>
+    </div>
+</div>
+
 
 
 

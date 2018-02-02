@@ -132,7 +132,7 @@
    
             
 
-    .pro_infoC{
+    .pro_infoB{
         width:100%;
         background: #fff;
         margin:0 auto;
@@ -173,21 +173,23 @@
             width: 237px;
             }
             th:nth-child(2),td:nth-child(2){
-              width:219px;
+              width:170px;
             }
             th:nth-child(3),td:nth-child(3){
-              width:186px;
+              width:145px;
             }
             th:nth-child(4),td:nth-child(4){
-             width:194px;
+             width:176px;
             }
             th:nth-child(5),td:nth-child(5){
-             width:203px;
+             width:147px;
             }
             th:nth-child(6),td:nth-child(6){
+             width:163px;
+            }
+            th:nth-child(7),td:nth-child(7){
              width:156px;
             }
-          
             td:nth-child(1){
               
                 .pro_img{
@@ -219,8 +221,13 @@
                     text-align: left;
                 }
             }
-            
-            td:nth-child(6){
+            td:nth-child(4){
+                p{
+                    padding-left: 44px;
+                    text-align: left;
+                }
+            }
+            td:nth-child(7){
                 p{
                     padding-left: 44px;
                     text-align: left;
@@ -235,6 +242,50 @@
   
    
 }
+
+      
+.pay_list{
+    width: 1180px;
+    text-align: right;
+    font-size: 16px;
+    margin: 0 auto 60px;
+    padding-right: 20px;
+    color: #333;
+    .pay{
+        height: 40px;
+        line-height: 35px;
+        span{
+            float: right;
+        }
+        p{
+            float: right;
+            span{
+                font-weight: 600;
+            }
+        }
+
+    }
+    .payable{
+       
+        p{
+            margin: 0;
+            padding: 0;
+            em{
+                color: #FF7F20;
+                font-size: 24px;
+            }
+            span{
+                color: #FF7F20;
+                font-size: 24px;
+            }
+        }
+       
+    }
+
+ 
+}
+      
+
       
 
 .footer_box{

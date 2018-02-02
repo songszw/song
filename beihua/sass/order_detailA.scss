@@ -1,77 +1,4 @@
-.marsk{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 100;
-    .marsk_box{
-        width: 510px;
-        height: 280px;
-        background: #fff;
-        border-radius: 5px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        .marsk_title{
-            width: 450px;
-            height: 46px;
-            line-height: 46px;
-            margin: 0 auto;
-            border-bottom: 1px solid #ddd;
-            .m_title{
-                float: left;
-                text-align: left;
-                line-height: 46px;
-                font-size: 16px;
-                color: #666666;
-            }
-            .m_close{
-                width: 30px;
-                height: 30px;
-                float: right;
-                margin-top: 10px;
-                cursor: pointer;
-                background: url('../img/icon_close.png') center no-repeat ;
-                &:hover{
-                    background: url('../img/icon_close_h.png') center no-repeat ;
-                }
-            }
-        }
-        .m_con{
-            margin: 0 auto;
-            text-align: center;
-            line-height: 140px;
-            font-size: 18px;
-            color: #333;
-        }
-        .m_btn{
-            width: 98px;
-            height: 38px;
-            line-height: 38px;
-            text-align: center;
-            font-size: 16px;
-            color: #fff;
-            display: inline-block;
-            border-radius: 5px;
-        }
-        .m_confirm{
-            background: #41AAFF;
-            margin: 0 60px 0 127px;
-            &:hover{
-                background: #3ba5fb;
-            }
-        }
-        .m_cancel{
-            background: #ddd;
-            &:hover{
-                background: #cdcdcd;
-            }
-        }
-    }
-}
+
 .confirm_msg{
     width: 1200px;
     margin: 10px auto 30px;
@@ -172,7 +99,12 @@
         font-size: 16px;
         color: #333;
         font-weight: bold;
+    }
+    .attention{
         background: url('../img/icon_attention.png') left 90px center no-repeat;
+    }
+    .complete{
+        background: url('../img/icon_complete.png') left 90px center no-repeat;
     }
     .o_number{
         font-size: 14px;

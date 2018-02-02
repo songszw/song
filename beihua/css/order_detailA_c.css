@@ -101,18 +101,18 @@
     font-weight: normal;
     font-size: 16px;
     color: #333; }
-  .order_info .pro_infoC {
+  .order_info .pro_infoA {
     width: 100%;
     background: #fff;
     margin: 0 auto;
     border-collapse: collapse;
     table-layout: fixed; }
-    .order_info .pro_infoC thead tr {
+    .order_info .pro_infoA thead tr {
       background: #E6F4FF; }
-    .order_info .pro_infoC tr {
+    .order_info .pro_infoA tr {
       text-align: center;
       background: #fff; }
-      .order_info .pro_infoC tr th {
+      .order_info .pro_infoA tr th {
         word-wrap: break-word;
         color: #666;
         font-size: 14px;
@@ -120,7 +120,7 @@
         text-align: center;
         font-weight: normal;
         margin: 0 2px; }
-      .order_info .pro_infoC tr td {
+      .order_info .pro_infoA tr td {
         border-bottom: 1px solid #ddd;
         word-wrap: break-word;
         font-size: 14px;
@@ -130,35 +130,33 @@
         line-height: 20px;
         border-right: 1px solid #E6F4FF;
         padding-top: 20px; }
-      .order_info .pro_infoC tr th:nth-child(1), .order_info .pro_infoC tr td:nth-child(1) {
-        width: 237px; }
-      .order_info .pro_infoC tr th:nth-child(2), .order_info .pro_infoC tr td:nth-child(2) {
-        width: 219px; }
-      .order_info .pro_infoC tr th:nth-child(3), .order_info .pro_infoC tr td:nth-child(3) {
-        width: 186px; }
-      .order_info .pro_infoC tr th:nth-child(4), .order_info .pro_infoC tr td:nth-child(4) {
-        width: 194px; }
-      .order_info .pro_infoC tr th:nth-child(5), .order_info .pro_infoC tr td:nth-child(5) {
-        width: 203px; }
-      .order_info .pro_infoC tr th:nth-child(6), .order_info .pro_infoC tr td:nth-child(6) {
-        width: 156px; }
-      .order_info .pro_infoC tr td:nth-child(1) .pro_img {
+      .order_info .pro_infoA tr th:nth-child(1), .order_info .pro_infoA tr td:nth-child(1) {
+        width: 272px; }
+      .order_info .pro_infoA tr th:nth-child(2), .order_info .pro_infoA tr td:nth-child(2) {
+        width: 225px; }
+      .order_info .pro_infoA tr th:nth-child(3), .order_info .pro_infoA tr td:nth-child(3) {
+        width: 198px; }
+      .order_info .pro_infoA tr th:nth-child(4), .order_info .pro_infoA tr td:nth-child(4) {
+        width: 256px; }
+      .order_info .pro_infoA tr th:nth-child(5), .order_info .pro_infoA tr td:nth-child(5) {
+        width: 245px; }
+      .order_info .pro_infoA tr td:nth-child(1) .pro_img {
         width: 80px;
         height: 80px;
         float: left;
-        margin-left: 40px; }
-        .order_info .pro_infoC tr td:nth-child(1) .pro_img img {
+        margin-left: 48px; }
+        .order_info .pro_infoA tr td:nth-child(1) .pro_img img {
           width: 100%;
           height: 100%; }
-      .order_info .pro_infoC tr td:nth-child(1) .pro_conpany {
+      .order_info .pro_infoA tr td:nth-child(1) .pro_conpany {
         width: 85px;
         height: 80px;
         text-align: left;
         font-size: 14px;
         color: #333333;
         float: left; }
-      .order_info .pro_infoC tr td:nth-child(1) .pro_name {
-        padding-left: 58px;
+      .order_info .pro_infoA tr td:nth-child(1) .pro_name {
+        padding-left: 66px;
         height: 42px;
         line-height: 30px;
         float: left;
@@ -166,9 +164,35 @@
         color: #333333;
         width: 206px;
         text-align: left; }
-      .order_info .pro_infoC tr td:nth-child(6) p {
-        padding-left: 44px;
+      .order_info .pro_infoA tr td:nth-child(4) p {
+        padding-left: 80px;
         text-align: left; }
+
+.pay_list {
+  width: 1180px;
+  text-align: right;
+  font-size: 16px;
+  margin: 0 auto 60px;
+  padding-right: 20px;
+  color: #333; }
+  .pay_list .pay {
+    height: 40px;
+    line-height: 35px; }
+    .pay_list .pay span {
+      float: right; }
+    .pay_list .pay p {
+      float: right; }
+      .pay_list .pay p span {
+        font-weight: 600; }
+  .pay_list .payable p {
+    margin: 0;
+    padding: 0; }
+    .pay_list .payable p em {
+      color: #FF7F20;
+      font-size: 24px; }
+    .pay_list .payable p span {
+      color: #FF7F20;
+      font-size: 24px; }
 
 .footer_box {
   height: 179px; }
@@ -178,4 +202,4 @@
   bottom: 0;
   left: 0; }
 
-/*# sourceMappingURL=order_detailC.css.map */
+/*# sourceMappingURL=order_detailA_c.css.map */

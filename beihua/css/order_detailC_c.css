@@ -170,6 +170,32 @@
         padding-left: 44px;
         text-align: left; }
 
+.pay_list {
+  width: 1180px;
+  text-align: right;
+  font-size: 16px;
+  margin: 0 auto 60px;
+  padding-right: 20px;
+  color: #333; }
+  .pay_list .pay {
+    height: 40px;
+    line-height: 35px; }
+    .pay_list .pay span {
+      float: right; }
+    .pay_list .pay p {
+      float: right; }
+      .pay_list .pay p span {
+        font-weight: 600; }
+  .pay_list .payable p {
+    margin: 0;
+    padding: 0; }
+    .pay_list .payable p em {
+      color: #FF7F20;
+      font-size: 24px; }
+    .pay_list .payable p span {
+      color: #FF7F20;
+      font-size: 24px; }
+
 .footer_box {
   height: 179px; }
 
@@ -178,4 +204,4 @@
   bottom: 0;
   left: 0; }
 
-/*# sourceMappingURL=order_detailC.css.map */
+/*# sourceMappingURL=order_detailC_c.css.map */

@@ -132,7 +132,7 @@
    
             
 
-    .pro_infoC{
+    .pro_infoA{
         width:100%;
         background: #fff;
         margin:0 auto;
@@ -170,31 +170,27 @@
             }
             
             th:nth-child(1),td:nth-child(1){
-            width: 237px;
+            width: 272px;
             }
             th:nth-child(2),td:nth-child(2){
-              width:219px;
+              width:225px;
             }
             th:nth-child(3),td:nth-child(3){
-              width:186px;
+              width:198px;
             }
             th:nth-child(4),td:nth-child(4){
-             width:194px;
+             width:256px;
             }
             th:nth-child(5),td:nth-child(5){
-             width:203px;
+             width:245px;
             }
-            th:nth-child(6),td:nth-child(6){
-             width:156px;
-            }
-          
             td:nth-child(1){
               
                 .pro_img{
                     width: 80px;
                     height: 80px;
                     float: left;
-                    margin-left: 40px;
+                    margin-left: 48px;
                     img{
                         width: 100%;
                         height: 100%;
@@ -209,7 +205,7 @@
                     float: left;
                 }
                 .pro_name{
-                    padding-left: 58px;
+                    padding-left: 66px;
                     height: 42px;
                     line-height: 30px;
                     float: left;
@@ -219,10 +215,9 @@
                     text-align: left;
                 }
             }
-            
-            td:nth-child(6){
+            td:nth-child(4){
                 p{
-                    padding-left: 44px;
+                    padding-left: 80px;
                     text-align: left;
                 }
             }
@@ -234,6 +229,44 @@
  
   
    
+}
+
+
+      
+.pay_list{
+    width: 1180px;
+    text-align: right;
+    font-size: 16px;
+    margin: 0 auto 60px;
+    padding-right: 20px;
+    color: #333;
+    .pay{
+        height: 40px;
+        line-height: 35px;
+        span{
+            float: right;
+        }
+        p{
+            float: right;
+            span{
+                font-weight: 600;
+            }
+        }
+    }
+    .payable{
+        p{
+            margin: 0;
+            padding: 0;
+            em{
+                color: #FF7F20;
+                font-size: 24px;
+            }
+            span{
+                color: #FF7F20;
+                font-size: 24px;
+            }
+        }
+    }
 }
       
 

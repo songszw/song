@@ -11,17 +11,6 @@
   
 </head>
 <body>
-    <div class="marsk hide">
-        <div class="marsk_box">
-            <div class="marsk_title">
-                <p class="m_title">消息提示</p>
-                <p class="m_close"></p>
-            </div>
-            <p class="m_con">是否确认付款</p>
-            <a class="m_confirm m_btn" href="javascript:;">确定</a>
-            <a class="m_cancel m_btn" href="javascript:;">取消</a>
-        </div>
-    </div>
 <div class="head">
     <div class="headCon clearfix">
         <ul class="headL clearfix">
@@ -84,7 +73,7 @@
     
 
 <div class="order_status">
-    <div class="o_status">当前订单状态：<span>已付款</span></div>
+    <div class="o_status attention">当前订单状态：<span>已付款</span></div>
     <div class="o_number">订单号:<span>2016028334182234</span></div>
 </div>
 
@@ -174,18 +163,6 @@
    </div>
 </div>
 <script src="../js/jquery-1.11.0.js"></script>
-<script>
-    $(function(){
-        $('.confirm').on('click',function(){
-            $('.marsk').removeClass('hide');
-        })
-        $('.m_close').on('click',function(){
-            $('.marsk').addClass('hide');
-        })
-    })
-</script>
-
-
 </body>
 </html>
 
