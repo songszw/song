@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background: #3da2fb;
+        }
+        .cloud{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: url('../img/cloud.png') left bottom no-repeat;
+            height: 248px;
+            background-size: 100%;
+        }
+        .content{
+            position: absolute;
+            width: 400px;
+            height: 80px;
+            top: 30%;
+            left: 50%;
+            margin-left: -260px;
+            background: url('../img/icon_tip.png') no-repeat;
+            padding-left: 120px;
+        }
+       .err_title{
+            font-size:36px;
+            font-family:MicrosoftYaHei;
+            color:rgba(255,255,255,1);
+       }
+       .err_val{
+            font-size:16px;
+            font-family:MicrosoftYaHei;
+            color:rgba(255,255,255,1);
+            line-height: 30px;
+       }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p class="err_title">服务器内部错误</p>
+        <p class="err_val">处理您的请求时发生错误！请确认您通过正确途径操作。</p>
+    </div>
+    <div class="cloud">
+    </div>
+</body>
+</html>
